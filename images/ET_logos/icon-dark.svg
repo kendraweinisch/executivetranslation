@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img">
+  <title>Executive Translation mark</title>
+  <desc>Executive Translation icon — italic serif E on dark background, for social media and square contexts</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&amp;display=swap');
+    </style>
+  </defs>
+
+  <rect width="100" height="100" rx="6" fill="#141210"/>
+  <text x="50" y="82"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="80"
+    font-weight="400"
+    font-style="italic"
+    fill="#9a7b4f"
+    text-anchor="middle">E</text>
+</svg>
