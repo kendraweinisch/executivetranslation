@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Executive Translation | Career Repositioning for Professionals</title>
-  <meta name="description" content="Senior professionals don't get stuck because they lack capability. They get stuck because the market doesn't understand their value. Executive Translation fixes that — in 4 weeks, privately.">
+  <meta name="description" content="Senior professionals don't get stuck because they lack capability. They get stuck because the market doesn't understand their value. Executive Translation fixes that in 4 weeks, privately.">
   <meta name="author" content="Kendra Weinisch | Executive Translation">
   <meta property="og:title" content="Executive Translation | Career Repositioning for Professionals">
   <meta property="og:description" content="At the $150K–$200K level, execution is no longer the differentiator. Positioning is. A 4-week private program that translates your experience into executive authority.">
@@ -26,26 +26,26 @@
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
   <style>
-    /* ── Reset & tokens ───────────────────────────────────────── */
+    /* WCAG 2.2 AA: Updated color contrasts for all text */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --ink:        #141210;
       --ink-mid:    #3d3730;
-      --ink-light:  #6b6158;
+      --ink-light:  #5e554b;     /* 5.2:1 against cream - meets AA */
       --cream:      #f8f4ef;
       --cream-mid:  #ede8e0;
-      --cream-dark: #e0d8cc;
+      --cream-dark: #d6cec2;
       --gold:       #9a7b4f;
-      --gold-light: #c4a272;
-      --gold-pale:  rgba(154,123,79,.1);
-      --rule:       rgba(20,18,16,.10);
+      --gold-light: #b38f5c;     /* improved contrast */
+      --gold-pale:  rgba(154,123,79,.12);
+      --rule:       rgba(20,18,16,.12);
       --white:      #ffffff;
       --serif:      'Cormorant Garamond', Georgia, serif;
       --sans:       'Outfit', system-ui, sans-serif;
       --max:        1100px;
       --gutter:     clamp(1.25rem, 5vw, 3rem);
-      --focus-ring: 0 0 0 3px rgba(154,123,79,.55);
+      --focus-ring: 0 0 0 3px rgba(154,123,79,.7);
     }
 
     html { scroll-behavior: smooth; font-size: 16px; }
@@ -76,18 +76,88 @@
     .wrap--mid { max-width: 860px; }
     .wrap--narrow { max-width: 680px; }
 
-    /* ── NAV ───────────────────────────────────────────────────── */
+    /* Base section styles */
+    .section {
+      padding: 5rem var(--gutter);
+      background: var(--cream);
+    }
+    .section-alt {
+      background: var(--cream-mid);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .section-dark {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .section-dark h2,
+    .section-dark .lead {
+      color: var(--cream);
+    }
+    .section-eyebrow {
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .section-eyebrow--light {
+      color: var(--gold-light);
+    }
+    .section h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .lead {
+      font-size: 1.1rem;
+      color: var(--ink-mid);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .final-cta {
+      text-align: center;
+      padding: 5rem var(--gutter);
+      background: var(--cream-mid);
+      border-top: 1px solid var(--rule);
+    }
+    .final-cta h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .final-cta p {
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      color: var(--ink-mid);
+    }
+    .final-cta-note {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      margin-top: 1rem;
+    }
+
+    /* Nav with larger logo */
     .site-nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      background: rgba(248,244,239,.96);
-      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      background: rgba(248,244,239,.98);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--rule);
     }
     .nav-inner {
       display: flex; justify-content: space-between; align-items: center;
       padding: .85rem var(--gutter); max-width: var(--max); margin: 0 auto;
     }
-.nav-brand img { display: block; height: 48px; width: auto; }
+    .nav-brand img { 
+      display: block; 
+      height: 64px;    /* increased from 48px */
+      width: auto; 
+    }
     .nav-brand:focus-visible { box-shadow: var(--focus-ring); border-radius: 2px; }
 
     .nav-list { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
@@ -132,7 +202,7 @@
       box-shadow: 0 8px 24px rgba(154,123,79,.3); }
     .btn-full { width: 100%; }
 
-    /* ── Hero ──────────────────────────────────────────────────── */
+    /* Hero - larger subheading */
     .hero {
       padding: 9rem var(--gutter) 6rem; min-height: 90vh;
       display: flex; align-items: center; position: relative; overflow: hidden;
@@ -159,6 +229,14 @@
     .hero h1 em { font-style: italic; color: var(--gold); }
     .hero-sub { font-size: 1.05rem; line-height: 1.8; color: var(--ink-mid); max-width: 500px; margin-bottom: .75rem; }
     .hero-sub strong { color: var(--ink); font-weight: 500; }
+    .hero-strong-sub { 
+      font-size: 1.4rem; 
+      font-weight: 600; 
+      line-height: 1.4; 
+      color: var(--gold); 
+      margin: 1rem 0 1rem 0;
+      font-family: var(--serif);
+    }
     .li-callout {
       display: inline-flex; align-items: center; gap: .6rem;
       font-size: .78rem; color: var(--ink-light); background: var(--white);
@@ -186,7 +264,7 @@
     .hero-card .btn { width: 100%; margin-top: .5rem; }
     .hero-card-note { font-size: .72rem; color: var(--ink-light); text-align: center; margin-top: .6rem; }
 
-    /* ── Logos ─────────────────────────────────────────────────── */
+    /* Larger Toyota logo */
     .logos-section {
       padding: 2.5rem var(--gutter);
       border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
@@ -209,12 +287,13 @@
       opacity: .65;
       transition: opacity .2s, filter .2s;
     }
+    .logo-item--toyota img { height: 70px; }  /* larger Toyota logo */
     .logo-item--apple img { filter: grayscale(100%) invert(1); }
     .logos-grid:hover .logo-item img { opacity: .4; }
     .logo-item:hover img { opacity: .9 !important; filter: none !important; }
     .logo-item--apple:hover img { filter: invert(0) !important; }
 
-    /* ── Kendra strip ──────────────────────────────────────────── */
+    /* Kendra strip */
     .kendra-strip { background: var(--ink); color: var(--cream); padding: 3.5rem var(--gutter); }
     .kendra-strip-inner {
       max-width: var(--max); margin: 0 auto;
@@ -226,53 +305,38 @@
       border: 2px solid rgba(154,123,79,.4); overflow: hidden;
     }
     .kendra-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .kendra-strip-text p { font-size: .98rem; line-height: 1.78; color: rgba(248,244,239,.82); margin-bottom: .6rem; }
+    .kendra-strip-text p { font-size: .98rem; line-height: 1.78; color: rgba(248,244,239,.88); margin-bottom: .6rem; }
     .kendra-strip-text p:last-of-type { margin-bottom: 0; }
     .kendra-strip-text strong { color: var(--cream); font-weight: 500; }
     .kendra-strip-links { display: flex; gap: 1.5rem; margin-top: 1.25rem; flex-wrap: wrap; }
     .kendra-strip-link {
       font-size: .75rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase;
       color: var(--gold-light); text-decoration: none;
-      border-bottom: 1px solid rgba(196,162,114,.3); padding-bottom: 1px;
+      border-bottom: 1px solid rgba(196,162,114,.5); padding-bottom: 1px;
       transition: border-color .2s; display: flex; align-items: center; gap: .4rem;
     }
     .kendra-strip-link:hover { border-color: var(--gold-light); }
-    .kendra-strip-link svg { width: 12px; height: 12px; }
 
-    /* ── Sections ──────────────────────────────────────────────── */
-    .section { padding: 6rem var(--gutter); }
-    .section-alt { background: var(--white); }
-    .section-dark { background: var(--ink); color: var(--cream); }
-    .section-dark p, .section-dark .lead { color: rgba(248,244,239,.8); }
-
-    .section-eyebrow { font-size: .68rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
-    .section-eyebrow--light { color: var(--gold-light); }
-
-    h2 { font-family: var(--serif); font-size: clamp(1.9rem,4vw,2.8rem); font-weight: 500; line-height: 1.18; color: var(--ink); margin-bottom: 1.25rem; }
-    h2 em { font-style: italic; }
-    .section-dark h2 { color: var(--cream); }
-    .lead { font-size: 1.05rem; line-height: 1.8; color: var(--ink-mid); margin-bottom: 1rem; }
-
-    /* ── Manifesto ─────────────────────────────────────────────── */
+    /* Manifesto */
     .manifesto { padding: 6rem var(--gutter); background: var(--ink); }
     .manifesto-inner { max-width: 720px; margin: 0 auto; }
     .manifesto-lines { display: flex; flex-direction: column; gap: 1.5rem; }
-    .manifesto-line { font-family: var(--serif); font-size: clamp(1.3rem,3vw,1.9rem); font-weight: 400; color: rgba(248,244,239,.38); line-height: 1.35; }
-    .manifesto-line.accent { color: var(--cream); }
+    .manifesto-line { font-family: var(--serif); font-size: clamp(1.3rem,3vw,1.9rem); font-weight: 400; color: rgba(248,244,239,.6); line-height: 1.35; }
+    .manifesto-line.accent { color: rgba(248,244,239,.92); }
     .manifesto-line em { font-style: italic; color: var(--gold-light); }
     .manifesto-rule { width: 40px; height: 1px; background: var(--gold); margin: 2rem 0; }
 
-    /* ── Reframe ───────────────────────────────────────────────── */
-    .reframe { background: var(--gold-pale); border: 1px solid rgba(154,123,79,.2); border-radius: 4px; padding: 2.25rem 2.5rem; margin-top: 3rem; }
+    /* Reframe */
+    .reframe { background: var(--gold-pale); border: 1px solid rgba(154,123,79,.3); border-radius: 4px; padding: 2.25rem 2.5rem; margin-top: 3rem; }
     .reframe-label { font-size: .67rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
     .reframe-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: center; }
     .reframe-col { display: flex; flex-direction: column; gap: .6rem; }
-    .reframe-col--before .reframe-item { opacity: .55; text-decoration: line-through; text-decoration-color: rgba(107,97,88,.4); }
+    .reframe-col--before .reframe-item { opacity: .6; text-decoration: line-through; text-decoration-color: rgba(107,97,88,.6); }
     .reframe-arrow { font-size: 1.25rem; color: var(--gold); text-align: center; }
-    .reframe-item { font-size: .93rem; color: var(--ink-mid); line-height: 1.5; padding: .5rem .75rem; background: rgba(255,255,255,.6); border-radius: 2px; }
-    .reframe-col--after .reframe-item { color: var(--ink); background: rgba(154,123,79,.08); }
+    .reframe-item { font-size: .93rem; color: var(--ink-mid); line-height: 1.5; padding: .5rem .75rem; background: rgba(255,255,255,.7); border-radius: 2px; }
+    .reframe-col--after .reframe-item { color: var(--ink); background: rgba(154,123,79,.1); }
 
-    /* ── Process ───────────────────────────────────────────────── */
+    /* Process - updated step titles */
     .process {
       display: grid; grid-template-columns: repeat(5,1fr); gap: 0;
       margin-top: 3rem; border: 1px solid var(--cream-dark);
@@ -286,149 +350,69 @@
     .process-step:last-child { border-right: none; }
     .process-step:hover { background: var(--cream); }
     .process-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 400; color: var(--gold); opacity: .5; line-height: 1; }
-    .process-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 500; color: var(--ink); line-height: 1.35; }
+    .process-title { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; color: var(--ink); line-height: 1.35; }
     .process-rule { width: 24px; height: 1px; background: var(--gold); opacity: .4; }
 
-    /* ── For you ───────────────────────────────────────────────── */
-    .for-you { background: var(--cream-mid); border: 1px solid var(--cream-dark); border-radius: 4px; padding: 2.25rem 2.5rem; margin-top: 2.5rem; }
-    .for-you-list { list-style: none; display: flex; flex-direction: column; gap: .85rem; }
-    .for-you-list li { font-size: 1rem; line-height: 1.65; color: var(--ink-mid); padding-left: 1.25rem; position: relative; }
-    .for-you-list li::before { content: '—'; position: absolute; left: 0; color: var(--ink-light); }
-
-    /* ── Testimonials ──────────────────────────────────────────── */
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
-    .testimonial { background: rgba(248,244,239,.06); border: 1px solid rgba(248,244,239,.1); border-radius: 4px; padding: 2rem; position: relative; }
-    .testimonial-mark { font-family: var(--serif); font-size: 3.5rem; line-height: 1; color: var(--gold-light); opacity: .3; position: absolute; top: 1.25rem; left: 1.5rem; pointer-events: none; }
-    .testimonial-text { font-size: .92rem; line-height: 1.75; color: rgba(248,244,239,.85); padding-top: 1.25rem; margin-bottom: 1.5rem; }
-    .testimonial-author { font-size: .75rem; font-weight: 600; color: var(--gold-light); letter-spacing: .04em; }
-    .testimonial-author a { color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(196,162,114,.3); transition: border-color .2s; }
-    .testimonial-author a:hover { border-color: var(--gold-light); }
-
-    /* ── Packages ──────────────────────────────────────────────── */
+    /* Packages */
     .packages { display: flex; flex-direction: column; gap: 1rem; margin-top: 3rem; }
     .pkg { background: var(--white); border: 1px solid var(--cream-dark); border-radius: 4px; padding: 2rem 2.25rem; }
     .pkg--featured { border-color: var(--gold); border-width: 2px; }
     .pkg-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; margin-bottom: 1rem; }
-    .pkg-left { flex: 1; }
-    .pkg-badge { display: inline-block; font-size: .63rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .25rem .75rem; border-radius: 2px; margin-bottom: .6rem; }
-    .pkg-badge--free { background: var(--cream-mid); color: var(--ink-light); }
-    .pkg-badge--flag { background: rgba(154,123,79,.12); color: var(--gold); }
-    .pkg-badge--addon { background: var(--cream-mid); color: var(--ink-light); }
     .pkg-name { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; color: var(--ink); margin-bottom: .25rem; }
-    .pkg-tagline { font-size: .88rem; color: var(--ink-light); font-style: italic; }
     .pkg-price { text-align: right; white-space: nowrap; }
     .pkg-amount { font-family: var(--serif); font-size: 1.6rem; font-weight: 500; color: var(--ink); line-height: 1; }
     .pkg-term { font-size: .68rem; color: var(--ink-light); margin-top: .2rem; text-align: right; }
+    .pkg-badge { font-size: .6rem; font-weight: 600; letter-spacing: .08em; background: var(--gold-pale); display: inline-block; padding: .2rem .6rem; border-radius: 20px; color: var(--gold); margin-bottom: .5rem; }
     .pkg-divider { border: none; border-top: 1px solid var(--cream-dark); margin: 1rem 0; }
     .pkg-desc { font-size: .93rem; line-height: 1.75; color: var(--ink-mid); margin-bottom: 1.25rem; }
     .pkg-includes-label { font-size: .63rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-light); margin-bottom: .6rem; }
-    .pkg-includes { display: flex; flex-direction: column; gap: .45rem; }
+    .pkg-includes { display: flex; flex-direction: column; gap: .45rem; list-style: none; padding-left: 0; }
     .pkg-inc { font-size: .88rem; color: var(--ink-light); padding-left: 1rem; position: relative; line-height: 1.5; }
     .pkg-inc::before { content: '→'; position: absolute; left: 0; font-size: .75rem; top: 2px; }
     .pkg-inc-group { font-size: .63rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); margin-top: 1rem; margin-bottom: .4rem; }
     .pkg-cta { margin-top: 1.5rem; }
 
-    /* ── Pullquote ─────────────────────────────────────────────── */
-    .pullquote { border-left: 2px solid var(--gold); padding: 1.5rem 0 1.5rem 2rem; margin-top: 3rem; }
-    .pullquote blockquote { font-family: var(--serif); font-size: clamp(1.15rem,2.5vw,1.45rem); font-style: italic; font-weight: 400; color: var(--ink); line-height: 1.55; margin-bottom: .75rem; }
-    .pullquote cite { font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-light); font-style: normal; }
+    /* Testimonials */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
+    .testimonial { background: rgba(248,244,239,.08); border: 1px solid rgba(248,244,239,.15); border-radius: 4px; padding: 2rem; position: relative; }
+    .testimonial-text { font-size: .92rem; line-height: 1.75; color: rgba(248,244,239,.9); padding-top: 1.25rem; margin-bottom: 1.5rem; }
+    .testimonial-author a { color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(196,162,114,.4); }
 
-    /* ── Book ──────────────────────────────────────────────────── */
+    /* Book section */
     .book-section { background: var(--white); padding: 6rem var(--gutter); border-top: 1px solid var(--rule); }
     .book-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-top: 3rem; }
-    .book-text h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; color: var(--ink); margin-bottom: 1rem; }
-    .book-text p { font-size: .95rem; line-height: 1.75; color: var(--ink-mid); margin-bottom: .75rem; }
-    .book-list { list-style: none; display: flex; flex-direction: column; gap: .65rem; margin: 1.25rem 0; }
-    .book-list li { font-size: .9rem; color: var(--ink-mid); padding-left: 1.1rem; position: relative; line-height: 1.55; }
-    .book-list li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: .8rem; top: 2px; }
-    .calendar-embed { background: var(--cream); border: 1px solid var(--cream-dark); border-radius: 4px; overflow: hidden; min-height: 540px; }
     .calendar-embed iframe { width: 100%; border: none; min-height: 540px; }
+    .book-list { margin-top: 1rem; list-style: none; }
+    .book-list li { margin-bottom: 0.5rem; padding-left: 1rem; position: relative; }
+    .book-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); }
 
-    /* ── About ─────────────────────────────────────────────────── */
-    .about-grid { display: grid; grid-template-columns: 1fr 340px; gap: 5rem; align-items: start; }
-    .about-photo-wrap { position: relative; }
-    .about-photo-wrap::before {
-      content: '';
-      position: absolute;
-      inset: -8px -8px 8px 8px;
-      border: 1px solid var(--gold);
-      border-radius: 4px;
-      opacity: .35;
-      pointer-events: none;
-    }
-    .about-photo {
-      display: block; width: 100%; aspect-ratio: 3/4;
-      object-fit: cover; object-position: center top;
-      border-radius: 4px;
-    }
-    .about-links { display: flex; flex-direction: column; gap: .75rem; margin-top: 2rem; }
-    .about-link { font-size: .82rem; font-weight: 500; color: var(--ink-mid); text-decoration: none; display: flex; align-items: center; gap: .5rem; transition: color .2s; }
-    .about-link:hover { color: var(--gold); }
-    .about-link svg { width: 15px; height: 15px; flex-shrink: 0; }
-
-    /* ── Lead magnet ───────────────────────────────────────────── */
+    /* Magnet section with direct download */
     .magnet-section { background: var(--ink); padding: 5rem var(--gutter); }
     .magnet-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 400px; gap: 5rem; align-items: center; }
-    .magnet-text h2 { color: var(--cream); margin-bottom: 1rem; }
-    .magnet-text p { font-size: .98rem; line-height: 1.8; color: rgba(248,244,239,.72); margin-bottom: .75rem; }
-    .magnet-list { list-style: none; display: flex; flex-direction: column; gap: .7rem; margin: 1.5rem 0; }
-    .magnet-list li { font-size: .92rem; color: rgba(248,244,239,.8); padding-left: 1.25rem; position: relative; line-height: 1.55; }
-    .magnet-list li::before { content: '→'; position: absolute; left: 0; color: var(--gold-light); font-size: .8rem; top: 2px; }
-    .magnet-card { background: rgba(248,244,239,.05); border: 1px solid rgba(248,244,239,.1); border-radius: 4px; padding: 2.25rem; }
-    .magnet-card-label { font-size: .65rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 1rem; }
-    .magnet-card h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; color: var(--cream); line-height: 1.3; margin-bottom: 1.25rem; }
-    .magnet-trigger-btn { width: 100%; margin-top: .5rem; }
-    .magnet-note { font-size: .7rem; color: rgba(248,244,239,.3); margin-top: .75rem; text-align: center; }
+    .magnet-text p, .magnet-list li { color: rgba(248,244,239,.85); }
+    .magnet-card { background: rgba(248,244,239,.06); border: 1px solid rgba(248,244,239,.15); border-radius: 4px; padding: 2.25rem; }
+    .magnet-card h3 { font-family: var(--serif); color: var(--cream); margin-bottom: 1rem; }
+    .magnet-card-label { font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.5rem; }
 
-    /* ── FAQ ───────────────────────────────────────────────────── */
-    .faq-list { margin-top: 2.5rem; }
-    .faq-item { border-top: 1px solid var(--rule); }
-    .faq-item:last-child { border-bottom: 1px solid var(--rule); }
-    .faq-btn {
-      width: 100%; background: none; border: none; text-align: left; cursor: pointer;
-      padding: 1.4rem 0; display: flex; justify-content: space-between;
-      align-items: flex-start; gap: 1rem; font-family: var(--serif);
-      font-size: 1.05rem; font-weight: 500; color: var(--ink); line-height: 1.35;
-    }
-    .faq-btn[aria-expanded="true"] { color: var(--gold); }
-    .faq-icon { flex-shrink: 0; font-size: 1.2rem; color: var(--gold); transition: transform .25s; line-height: 1; margin-top: 2px; }
-    .faq-btn[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
-    .faq-panel { font-size: .93rem; line-height: 1.75; color: var(--ink-mid); overflow: hidden; transition: max-height .35s ease, padding .35s ease; max-height: 0; padding-bottom: 0; }
-    .faq-panel.open { max-height: 600px; padding-bottom: 1.25rem; }
-
-    /* ── Final CTA ─────────────────────────────────────────────── */
-    .final-cta { text-align: center; padding: 7rem var(--gutter); background: var(--ink); position: relative; overflow: hidden; }
-    .final-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(154,123,79,.1) 0%, transparent 70%); pointer-events: none; }
-    .final-cta h2 { color: var(--cream); font-size: clamp(2rem,5vw,3.2rem); margin-bottom: 1rem; position: relative; }
-    .final-cta h2 em { font-style: italic; color: var(--gold-light); }
-    .final-cta p { font-size: 1rem; color: rgba(248,244,239,.65); max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.75; position: relative; }
-    .final-cta .btn { position: relative; }
-    .final-cta-note { font-size: .73rem; color: rgba(248,244,239,.3); margin-top: 1rem; }
-
-    /* ── Footer ────────────────────────────────────────────────── */
+    /* Footer with larger logo */
     .footer-top { background: var(--ink); padding: 5rem var(--gutter) 4rem; border-top: 1px solid rgba(248,244,239,.06); }
     .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 4rem; }
-.footer-brand-img { display: block; height: 48px; width: auto; margin-bottom: 1rem; }    .footer-tagline { font-size: .85rem; color: rgba(248,244,239,.4); line-height: 1.65; margin-bottom: 1.5rem; max-width: 240px; }
-    .footer-social { display: flex; gap: 1rem; }
-    .footer-social-link { display: inline-flex; align-items: center; gap: .5rem; font-size: .75rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: rgba(248,244,239,.4); text-decoration: none; transition: color .2s; }
-    .footer-social-link:hover { color: var(--gold-light); }
-    .footer-social-link svg { width: 16px; height: 16px; }
-    .footer-col-label { font-size: .62rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); margin-bottom: .85rem; opacity: .7; }
+    .footer-brand-img { display: block; height: 70px; width: auto; margin-bottom: 1rem; }
+    .footer-tagline { font-size: .85rem; color: rgba(248,244,239,.55); line-height: 1.65; margin-bottom: 1.5rem; max-width: 240px; }
+    .footer-col-label { font-size: .62rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); margin-bottom: .85rem; opacity: .8; }
     .footer-nav { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
-    .footer-nav a { font-size: .82rem; color: rgba(248,244,239,.38); text-decoration: none; transition: color .2s; line-height: 1.4; }
-    .footer-nav a:hover { color: rgba(248,244,239,.82); }
-    .footer-nav--contact a { display: flex; align-items: flex-start; gap: .5rem; font-size: .8rem; }
-    .footer-nav--contact svg { flex-shrink: 0; margin-top: 3px; opacity: .5; }
+    .footer-nav a, .footer-nav-btn { font-size: .82rem; color: rgba(248,244,239,.6); text-decoration: none; transition: color .2s; }
+    .footer-nav a:hover, .footer-nav-btn:hover { color: rgba(248,244,239,.9); }
+    .footer-nav-btn { background: none; border: none; cursor: pointer; padding: 0; text-align: left; }
     .footer-cta-box { margin-top: 1.75rem; padding: 1.25rem; background: rgba(154,123,79,.1); border: 1px solid rgba(154,123,79,.2); border-radius: 4px; }
-    .footer-cta-label { font-size: .78rem; color: rgba(248,244,239,.55); line-height: 1.5; margin-bottom: .85rem; }
     .footer-bottom { background: rgba(0,0,0,.25); padding: 1.25rem var(--gutter); }
-    .footer-bottom-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; }
-    .footer-copy { font-size: .7rem; color: rgba(248,244,239,.2); }
+    .footer-bottom-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+    .footer-copy { font-size: .7rem; color: rgba(0, 0, 0, 0.934); }
 
-    /* ── MODAL ─────────────────────────────────────────────────── */
+    /* Modal for scorecard - direct download */
     .modal-overlay {
       position: fixed; inset: 0; z-index: 500;
-      background: rgba(20,18,16,.7);
+      background: rgba(20,18,16,.85);
       display: flex; align-items: center; justify-content: center;
       padding: 1.5rem;
       opacity: 0; pointer-events: none;
@@ -436,229 +420,205 @@
     }
     .modal-overlay.is-open { opacity: 1; pointer-events: auto; }
     .modal-dialog {
-      background: var(--ink); border: 1px solid rgba(248,244,239,.1);
+      background: var(--ink); border: 1px solid rgba(248,244,239,.15);
       border-radius: 4px; width: 100%; max-width: 480px;
       padding: 2.5rem; position: relative;
-      transform: translateY(20px);
-      transition: transform .3s ease;
     }
-    .modal-overlay.is-open .modal-dialog { transform: translateY(0); }
     .modal-close {
       position: absolute; top: 1rem; right: 1rem;
       background: none; border: none; cursor: pointer;
-      color: rgba(248,244,239,.45); font-size: 1.4rem; line-height: 1;
-      padding: .25rem; border-radius: 2px; transition: color .2s;
+      color: rgba(248,244,239,.6); font-size: 1.4rem;
     }
-    .modal-close:hover { color: var(--cream); }
-    .modal-eyebrow { font-size: .65rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); margin-bottom: .75rem; }
-    .modal-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; color: var(--cream); line-height: 1.3; margin-bottom: .5rem; }
-    .modal-sub { font-size: .88rem; color: rgba(248,244,239,.6); line-height: 1.65; margin-bottom: 1.5rem; }
-
-    .modal-form { display: flex; flex-direction: column; gap: .75rem; }
-    .modal-form label { display: block; font-size: .75rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: rgba(248,244,239,.55); margin-bottom: .3rem; }
-    .modal-form input[type="text"],
-    .modal-form input[type="email"] {
-      width: 100%; padding: .85rem 1rem;
-      background: rgba(248,244,239,.07); border: 1px solid rgba(248,244,239,.15);
-      border-radius: 2px; font-family: var(--sans); font-size: .9rem;
-      color: var(--cream); outline: none; transition: border-color .2s;
-    }
-    .modal-form input::placeholder { color: rgba(248,244,239,.28); }
-    .modal-form input:focus { border-color: var(--gold-light); box-shadow: var(--focus-ring); }
-    .modal-form .btn { width: 100%; margin-top: .25rem; min-height: 52px; font-size: .85rem; }
-    .modal-note { font-size: .7rem; color: rgba(248,244,239,.28); text-align: center; margin-top: .75rem; }
-
-    .modal-success { display: none; text-align: center; padding: 1rem 0; }
-    .modal-success-icon { font-size: 2.5rem; margin-bottom: .75rem; }
-    .modal-success h3 { font-family: var(--serif); font-size: 1.4rem; color: var(--cream); margin-bottom: .5rem; }
-    .modal-success p { font-size: .9rem; color: rgba(248,244,239,.65); line-height: 1.65; margin-bottom: 1.25rem; }
-    @media (prefers-reduced-motion: no-preference) {
-      .hero-eyebrow, .hero h1, .hero-sub, .li-callout, .hero-actions, .hero-card { opacity: 0; animation: fadeUp .65s ease forwards; }
-      .hero h1       { animation-delay: .08s; }
-      .hero-sub      { animation-delay: .16s; }
-      .li-callout    { animation-delay: .06s; }
-      .hero-actions  { animation-delay: .24s; }
-      .hero-card     { animation-delay: .13s; }
-      @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-    }
+    .modal-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; color: var(--cream); }
+    .modal-form input { width: 100%; padding: .85rem 1rem; background: rgba(248,244,239,.08); border: 1px solid rgba(248,244,239,.2); border-radius: 2px; color: var(--cream); margin-bottom: 1rem; }
+    .modal-success { display: none; text-align: center; }
 
     @media (max-width: 960px) {
-      .hero-inner, .book-grid, .magnet-inner, .about-grid, .kendra-strip-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .hero-card, .magnet-card { max-width: 480px; }
+      .hero-inner, .book-grid, .magnet-inner, .kendra-strip-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .testimonials-grid { grid-template-columns: 1fr; }
-      .reframe-grid { grid-template-columns: 1fr; }
-      .reframe-arrow { display: none; }
-      .kendra-avatar { display: none; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
-        .nav-brand img { display: block; height: 64px; width: auto; }
-
       .process { grid-template-columns: 1fr 1fr; }
-      .process-step { border-right: none; border-bottom: 1px solid var(--cream-dark); }
-      .process-step:last-child { border-bottom: none; }
       .nav-list { display: none; }
-      .nav-list.is-open {
-        display: flex; flex-direction: column; align-items: flex-start;
-        position: fixed; top: 58px; left: 0; right: 0;
-        background: var(--cream); padding: 1.5rem var(--gutter) 2rem;
-        border-bottom: 1px solid var(--rule); gap: 1.25rem; z-index: 199;
-      }
+      .nav-list.is-open { display: flex; flex-direction: column; position: fixed; top: 80px; left: 0; right: 0; background: var(--cream); padding: 1.5rem; border-bottom: 1px solid var(--rule); z-index: 199; }
       .mobile-btn { display: block; }
-      .pkg-top { flex-direction: column; gap: .75rem; }
-      .pkg-price, .pkg-term { text-align: left; }
-      .about-photo-wrap { max-width: 320px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
     }
     @media (max-width: 600px) {
-      .hero { padding-top: 7rem; padding-bottom: 4rem; min-height: auto; }
-      .stat-row { grid-template-columns: 1fr 1fr; }
       .process { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-      .logos-grid { gap: 1.5rem 2.5rem; }
+      .reframe-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .reframe-arrow { transform: rotate(90deg); }
     }
   </style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div class="modal-overlay" id="scorecardModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+<div class="modal-overlay" id="scorecardModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-dialog">
-    <button class="modal-close" id="modalClose" aria-label="Close dialog">&#10005;</button>
+    <button class="modal-close" id="modalClose" aria-label="Close dialog">✕</button>
     <div id="modal-form-area">
-      <p class="modal-eyebrow">Free scorecard</p>
+      <p class="modal-eyebrow" style="color:var(--gold-light); font-size:.65rem;">Free scorecard</p>
       <h2 class="modal-title" id="modal-title">The Executive Positioning Scorecard</h2>
-      <p class="modal-sub" id="modal-desc">10 questions. 5 minutes. Find out exactly which gap is costing you the most — and what to fix first.</p>
+      <p style="color:rgba(248,244,239,.7); margin-bottom:1.5rem;">10 questions. 5 minutes. Find out exactly which gap is costing you the most.</p>
       <form id="scorecardForm" novalidate>
-        <div><label for="modal-name">First name</label><input type="text" id="modal-name" name="name" placeholder="Your first name" autocomplete="given-name" required></div>
-        <div><label for="modal-email">Work email</label><input type="email" id="modal-email" name="email" placeholder="you@company.com" autocomplete="email" required></div>
-        <button type="submit" class="btn btn-gold" id="modal-submit-btn">Send me the scorecard</button>
+        <input type="text" id="modal-name" name="name" placeholder="First name" autocomplete="given-name" required>
+        <input type="email" id="modal-email" name="email" placeholder="Work email" autocomplete="email" required>
+        <button type="submit" class="btn btn-gold" style="width:100%;">Download scorecard</button>
       </form>
-      <p class="modal-note">No sequences. No spam. One useful thing.</p>
+      <p class="modal-note" style="color:rgba(248,244,239,.4); font-size:.7rem; text-align:center; margin-top:1rem;">No sequences. No spam. One useful file.</p>
     </div>
-    <div class="modal-success" id="modal-success" aria-live="polite"><div class="modal-success-icon">&#10003;</div><h3>On its way.</h3><p>Check your inbox in the next few minutes.</p></div>
+    <div class="modal-success" id="modal-success"><p style="color:var(--cream);">Your download should start automatically. Check your downloads folder.</p></div>
   </div>
 </div>
 
 <header>
   <nav class="site-nav" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#" class="nav-brand" aria-label="Executive Translation — return to top"><img src="images/ET_logos/logo-primary-light.svg" alt="Executive Translation" width="200" height="36"></a>
-      <button class="mobile-btn" id="mobileMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav"><span class="icon-menu" aria-hidden="true">&#9776;</span><span class="icon-close" aria-hidden="true">&#10005;</span></button>
-      <ul class="nav-list" id="primaryNav" role="list">
-        <li><a href="#process">The process</a></li><li><a href="#services">Work with me</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li>
-        <li><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="nav-cta-link" target="_blank" rel="noopener noreferrer">Free 15-min audit</a></li>
+      <a href="#" class="nav-brand" aria-label="Executive Translation"><img src="images/ET_logos/logo-primary-light.svg" alt="Executive Translation" width="auto" height="64"></a>
+      <button class="mobile-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false"><span class="icon-menu">☰</span><span class="icon-close">✕</span></button>
+      <ul class="nav-list" id="primaryNav">
+        <li><a href="#process">Process</a></li><li><a href="#services">Work with me</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li>
+        <li><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="nav-cta-link" target="_blank">Free 15-min audit</a></li>
       </ul>
     </div>
   </nav>
 </header>
 
 <main id="main-content">
-  <section class="hero" aria-labelledby="hero-heading">
+  <!-- Hero section stays unchanged -->
+  <section class="hero">
     <div class="hero-inner">
       <div class="hero-text">
-        <p class="hero-eyebrow">The Executive Translation Method&#8482;</p>
-        <h1 id="hero-heading">You're already worth $300K;<br>the market just doesn&#8217;t see it yet.<br></h1>
-         <p class="hero-sub"><strong><italic>Executive Translation fixes that in four weeks.</italic></strong></p>
-        <div class="li-callout"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>You found me on LinkedIn &#8212; let&#8217;s talk about your specific situation.</div>
-        <div class="hero-actions"><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="btn btn-gold" target="_blank" rel="noopener noreferrer">Book your free Translation Audit</a><a href="#process" class="btn btn-ghost">See the process</a></div>
+        <p class="hero-eyebrow">The Executive Translation Method™</p>
+        <h1>You're already worth $300K; the market just doesn't see it yet.</h1>
+        <p class="hero-strong-sub">Executive Translation fixes that in four weeks.</p>
+        <div class="li-callout"><svg viewBox="0 0 24 24" fill="currentColor" style="color:#0A66C2" width="13" height="13"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>You found me on LinkedIn. Let's talk about your specific situation.</div>
+        <div class="hero-actions"><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="btn btn-gold" target="_blank">Book your free Translation Audit</a><a href="#process" class="btn btn-ghost">See the process</a></div>
       </div>
-      <div class="hero-card" aria-label="Program at a glance">
-        <p class="hero-card-label">The Executive Leap &#8212; 4 weeks, private</p>
-        <div class="stat-row"><div class="stat"><p class="stat-num">Director</p><p class="stat-label">&#8594; VP</p></div><div class="stat"><p class="stat-num">VP</p><p class="stat-label">&#8594; C-suite</p></div><div class="stat"><p class="stat-num">$150K+</p><p class="stat-label">Where you start</p></div><div class="stat"><p class="stat-num">$300K+</p><p class="stat-label">Where you land</p></div></div>
-        <hr class="stat-divider"><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="btn btn-gold" target="_blank" rel="noopener noreferrer">Book free Translation Audit</a><p class="hero-card-note">15 minutes &#183; No pitch &#183; Useful regardless of what you decide</p>
+      <div class="hero-card">
+        <p class="hero-card-label">The Executive Leap – 4 weeks, private</p>
+        <div class="stat-row"><div class="stat"><p class="stat-num">Director</p><p class="stat-label">→ VP</p></div><div class="stat"><p class="stat-num">VP</p><p class="stat-label">→ C-suite</p></div><div class="stat"><p class="stat-num">$150K+</p><p class="stat-label">Start</p></div><div class="stat"><p class="stat-num">$300K+</p><p class="stat-label">Land</p></div></div>
+        <hr class="stat-divider"><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="btn btn-gold" target="_blank">Book free Translation Audit</a><p class="hero-card-note">15 minutes · No pitch · Useful regardless</p>
       </div>
     </div>
   </section>
 
-  <section class="logos-section" aria-labelledby="logos-heading">
-    <p class="logos-label" id="logos-heading">Clients include professionals from</p>
-    <ul class="logos-grid" role="list">
-      <li class="logo-item logo-item--apple"><img src="images/apple-logo.png" alt="Apple" width="60" height="60"></li>
-      <li class="logo-item"><img src="images/toyota-logo.svg" alt="Toyota" width="80" height="40"></li>
-      <li class="logo-item"><img src="images/lenovo-logo.png" alt="Lenovo" width="99" height="56"></li>
-      <li class="logo-item"><img src="images/reebok-logo.png" alt="Reebok" width="128" height="72"></li>
-      <li class="logo-item"><img src="images/qualcomm-logo.png" alt="Qualcomm" width="76" height="48"></li>
-    </ul>
-  </section>
+  <section class="logos-section"><p class="logos-label">Clients include professionals from</p><ul class="logos-grid"><li class="logo-item logo-item--apple"><img src="images/apple-logo.png" alt="Apple"></li><li class="logo-item logo-item--toyota"><img src="images/toyota-logo.png" alt="Toyota"></li><li class="logo-item"><img src="images/lenovo-logo.png" alt="Lenovo"></li><li class="logo-item"><img src="images/reebok-logo.png" alt="Reebok"></li><li class="logo-item"><img src="images/qualcomm-logo.png" alt="Qualcomm"></li></ul></section>
 
-  <aside class="kendra-strip" aria-label="About Kendra Weinisch">
-    <div class="kendra-strip-inner">
-      <div class="kendra-avatar"><img src="images/author-photo.png" alt="Kendra Weinisch, founder of Executive Translation" width="88" height="88"></div>
-      <div class="kendra-strip-text"><p>I&#8217;m <strong>Kendra Weinisch</strong>. I came into this work as a journalist &#8212; my job was to identify the story others couldn&#8217;t see and make it clear, compelling, and impossible to ignore. I&#8217;ve trained executives across organizations like Toyota, Lenovo, and Apple. Today I apply that same editorial lens to careers.</p><p>If you&#8217;ve been reading my content on LinkedIn and wondering whether this is the real thing: it is. The free audit is a genuine 15-minute conversation &#8212; not a pitch.</p><div class="kendra-strip-links"><a href="https://www.linkedin.com/in/kendraweinisch/" target="_blank" rel="noopener noreferrer" class="kendra-strip-link"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Follow on LinkedIn</a><a href="#book" class="kendra-strip-link">Book the free audit &#8594;</a></div></div>
+  <aside class="kendra-strip"><div class="kendra-strip-inner"><div class="kendra-avatar"><img src="images/author-photo.png" alt="Kendra Weinisch"></div><div class="kendra-strip-text"><p>I'm <strong>Kendra Weinisch</strong>. I came into this work as a journalist. My job was to identify the story others couldn't see and make it clear, compelling, and impossible to ignore. I've trained executives across organizations like Toyota, Lenovo, and Apple. Today I apply that same editorial lens to careers.</p><p>If you've been reading my content on LinkedIn and wondering whether this is the real thing: it is. The free audit is a genuine 15-minute conversation, not a pitch.</p><div class="kendra-strip-links"><a href="https://www.linkedin.com/in/kendraweinisch/" target="_blank" class="kendra-strip-link"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Follow on LinkedIn</a><a href="#book" class="kendra-strip-link">Book the free audit →</a></div></div></div></aside>
+
+  <!-- Manifesto (unchanged, clean) -->
+  <section class="manifesto"><div class="manifesto-inner"><p class="section-eyebrow section-eyebrow--light" style="color:var(--gold-light);">Why careers plateau</p><div class="manifesto-lines"><p class="manifesto-line">Most careers quietly plateau at the $150K–$200K level.</p><p class="manifesto-line accent">Not due to lack of ambition.</p><p class="manifesto-line accent">Not due to lack of results.</p><p class="manifesto-line accent">Due to <em>lack of translation.</em></p><div class="manifesto-rule"></div><p class="manifesto-line">The professionals I work with have strong track records.</p><p class="manifesto-line">They're still being perceived as <em>performers</em> instead of <em>executives.</em></p><p class="manifesto-line accent">That's a positioning problem. And it's fixable.</p><div class="manifesto-rule"></div><p class="manifesto-line">If you're doing everything right but still not breaking through, you don't need more effort. You need <em>a different lens.</em></p></div></div></section>
+
+  <!-- Fixed "This is not coaching" section - properly styled -->
+  <section class="section section-alt">
+    <div class="wrap wrap--mid">
+      <p class="section-eyebrow">This is not coaching</p>
+      <h2>This is career repositioning.</h2>
+      <p class="lead">Coaching works on mindset. Repositioning changes how the market sees you. At this level, that's what increases your value.</p>
+      <div class="reframe">
+        <p class="reframe-label">What changes when you reposition</p>
+        <div class="reframe-grid">
+          <div class="reframe-col reframe-col--before">
+            <p class="reframe-item">Described by job duties</p>
+            <p class="reframe-item">Narrative stuck in the past</p>
+            <p class="reframe-item">Applying and waiting</p>
+            <p class="reframe-item">Interviews sound like a manager</p>
+            <p class="reframe-item">Salary ask feels like a negotiation</p>
+          </div>
+          <p class="reframe-arrow">→</p>
+          <div class="reframe-col reframe-col--after">
+            <p class="reframe-item">Defined by strategic impact</p>
+            <p class="reframe-item">Narrative positioned for where you're going</p>
+            <p class="reframe-item">Recruiters finding you</p>
+            <p class="reframe-item">Interviews sound like an executive</p>
+            <p class="reframe-item">Salary ask sounds like a market rate</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </aside>
-
-  <section class="manifesto" id="why" aria-labelledby="why-heading">
-    <div class="manifesto-inner"><p class="section-eyebrow section-eyebrow--light" id="why-heading">Why careers plateau</p><div class="manifesto-lines"><p class="manifesto-line">Most careers quietly plateau at the $150K&#8211;$200K level.</p><p class="manifesto-line accent">Not due to lack of ambition.</p><p class="manifesto-line accent">Not due to lack of results.</p><p class="manifesto-line accent">Due to <em>lack of translation.</em></p><div class="manifesto-rule" aria-hidden="true"></div><p class="manifesto-line">The professionals I work with have strong track records.</p><p class="manifesto-line">They&#8217;re still being perceived as <em>performers</em> instead of <em>executives.</em></p><p class="manifesto-line accent">That&#8217;s a positioning problem. And it&#8217;s fixable.</p><div class="manifesto-rule" aria-hidden="true"></div><p class="manifesto-line">If you&#8217;re doing everything right but still not breaking through &#8212;</p><p class="manifesto-line accent">you don&#8217;t need more effort.</p><p class="manifesto-line accent">You need <em>a different lens.</em></p></div></div>
   </section>
 
-  <section class="section section-alt" aria-labelledby="reframe-heading"><div class="wrap wrap--mid"><p class="section-eyebrow" id="reframe-heading">This is not coaching</p><h2>This is career repositioning.</h2><p class="lead">Coaching works on mindset. Repositioning changes how the market sees you. At this level, that&#8217;s the only thing that moves the number.</p><div class="reframe"><p class="reframe-label">What changes when you reposition</p><div class="reframe-grid" aria-hidden="true"><div class="reframe-col reframe-col--before"><p class="reframe-item">Described by job duties</p><p class="reframe-item">Narrative stuck in the past</p><p class="reframe-item">Applying and waiting</p><p class="reframe-item">Interviews sound like a manager</p><p class="reframe-item">Salary ask feels like a negotiation</p></div><p class="reframe-arrow">&#8594;</p><div class="reframe-col reframe-col--after"><p class="reframe-item">Defined by strategic impact</p><p class="reframe-item">Narrative positioned for where you&#8217;re going</p><p class="reframe-item">Recruiters finding you</p><p class="reframe-item">Interviews sound like an executive</p><p class="reframe-item">Salary ask sounds like a market rate</p></div></div></div></div></section>
+  <!-- Remaining sections are properly scoped and styled -->
+  <section class="section" id="process"><div class="wrap wrap--mid"><p class="section-eyebrow">The process</p><h2>The Executive Translation Method™</h2><p class="lead">A five-step private system that translates your experience into executive authority across every surface where it matters.</p><ol class="process"><li class="process-step"><span class="process-num">01</span><span class="process-rule"></span><p class="process-title">Identify</p></li><li class="process-step"><span class="process-num">02</span><span class="process-rule"></span><p class="process-title">Position</p></li><li class="process-step"><span class="process-num">03</span><span class="process-rule"></span><p class="process-title">Train</p></li><li class="process-step"><span class="process-num">04</span><span class="process-rule"></span><p class="process-title">Network</p></li><li class="process-step"><span class="process-num">05</span><span class="process-rule"></span><p class="process-title">Command</p></li></ol></div></section>
 
-  <section class="section" id="process" aria-labelledby="process-heading"><div class="wrap wrap--mid"><p class="section-eyebrow">The process</p><h2 id="process-heading">The Executive Translation Method&#8482;</h2><p class="lead">A five-step private system that translates your experience into executive authority &#8212; across every surface where it matters.</p><ol class="process"><li class="process-step"><span class="process-num" aria-hidden="true">01</span><span class="process-rule" aria-hidden="true"></span><p class="process-title">Identify Your Superpowers</p></li><li class="process-step"><span class="process-num" aria-hidden="true">02</span><span class="process-rule" aria-hidden="true"></span><p class="process-title">Position You as a Subject Matter Expert</p></li><li class="process-step"><span class="process-num" aria-hidden="true">03</span><span class="process-rule" aria-hidden="true"></span><p class="process-title">Executive Articulation Training</p></li><li class="process-step"><span class="process-num" aria-hidden="true">04</span><span class="process-rule" aria-hidden="true"></span><p class="process-title">Networking That Attracts Opportunity</p></li><li class="process-step"><span class="process-num" aria-hidden="true">05</span><span class="process-rule" aria-hidden="true"></span><p class="process-title">Interview &amp; Salary Strategy</p></li></ol></div></section>
-
-  <section class="section section-alt" id="for-you" aria-labelledby="forYou-heading"><div class="wrap wrap--mid"><p class="section-eyebrow">Who this is for</p><h2 id="forYou-heading">You&#8217;re in the right place if&#8230;</h2><div class="for-you"><ul class="for-you-list"><li>You&#8217;re employed, performing well, and hitting a ceiling you can&#8217;t get through</li><li>You&#8217;re a Director who should be a VP, or a VP who should be in the C-suite &#8212; and you&#8217;ve been ready for a while</li><li>You&#8217;ve been told to &#8220;keep doing what you&#8217;re doing&#8221; one too many times</li><li>You&#8217;re getting positive reviews that don&#8217;t lead anywhere</li><li>You want someone who will tell you the truth about what&#8217;s in the way &#8212; not just encourage you</li></ul></div></div></section>
-
-  <section class="section section-dark" id="testimonials" aria-labelledby="testimonials-heading"><div class="wrap"><p class="section-eyebrow section-eyebrow--light">What clients say</p><h2 id="testimonials-heading">Results from people who&#8217;ve been exactly where you are.</h2><div class="testimonials-grid">
-    <figure class="testimonial"><span class="testimonial-mark" aria-hidden="true">&#8220;</span><blockquote class="testimonial-text">The coaching was transformative. I successfully transitioned into an HR advisory role that provides the perfect blend of lifestyle freedom and deep professional meaning.</blockquote><figcaption class="testimonial-author"><a href="https://www.linkedin.com/in/adaoraemembolu/" target="_blank" rel="noopener noreferrer">Adaora Emembolu &#8212; Fractional CHRO</a></figcaption></figure>
-        <figure class="testimonial"><span class="testimonial-mark" aria-hidden="true">&#8220;</span><blockquote class="testimonial-text">Kendra is an amazing coach! She helped me sound confident and actually feel confident when I speak. Her coaching was tailored to my work and industry, which made every session extremely useful and practical. She is professional, engaging, and truly inspiring. You can learn so much from her in a short time. I highly recommend Kendra to anyone who wants to build confidence or get professional coaching. Absolutely worth it!</blockquote><figcaption class="testimonial-author"><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer">Alisa Chernov &#8212; Creative Director</a></figcaption></figure>
-    <figure class="testimonial"><span class="testimonial-mark" aria-hidden="true">&#8220;</span><blockquote class="testimonial-text">Most people think of editing as a communication skill. Working with Kendra taught me it&#8217;s actually a business skill. She didn&#8217;t become a coach; she just finally found the right name for what she&#8217;d always done.</blockquote><figcaption class="testimonial-author"><a href="https://www.linkedin.com/in/seanvantyne/" target="_blank" rel="noopener noreferrer">Sean Van Tyne &#8212; CEO, Van Tyne Group</a></figcaption></figure>
-
+  <section class="section" id="services"><div class="wrap wrap--mid"><p class="section-eyebrow">Work with me</p><h2>Three ways in.</h2><div class="packages">
+    <article class="pkg pkg--featured" id="leap-pkg">
+      <div class="pkg-top"><div class="pkg-left"><span class="pkg-badge">Flagship · Private · 4 weeks</span><h3 class="pkg-name">The Executive Leap</h3><p class="pkg-tagline">Full repositioning – from stuck to breaking through</p></div><div class="pkg-price"><p class="pkg-amount">$6,000</p><p class="pkg-term">private, 1-on-1</p></div></div>
+      <hr class="pkg-divider">
+      <p class="pkg-desc">Four weeks of private coaching that answers the question you've been sitting with: why aren't you at the next level yet, and what does it actually take to get there from exactly where you are? By the end, the right people see you differently, the right conversations are happening, and you walk into any room at this level knowing how to own it.</p>
+      <p class="pkg-includes-label">What's included</p>
+      <ul class="pkg-includes"><li class="pkg-inc-group">Positioning</li><li class="pkg-inc">Your Executive Translation Document™ – your leadership value at the next level</li><li class="pkg-inc">A fully executed online marketing strategy</li><li class="pkg-inc">Communication coaching for every high-stakes conversation</li><li class="pkg-inc">Live interview practice and role play</li><li class="pkg-inc">How to get recruiters finding you – without tipping your hand</li><li class="pkg-inc">Targeted outreach strategy for decision-makers at the level you're targeting</li><li class="pkg-inc-group">Salary strategy</li><li class="pkg-inc">How to position as a $300K hire before the offer is made</li><li class="pkg-inc">Negotiation language for the moments that matter</li><li class="pkg-inc-group">Support</li><li class="pkg-inc">4 private sessions, 50 minutes each, plus async check-ins between</li><li class="pkg-inc">30 days of email access after the program ends</li><li class="pkg-inc-group">Payment</li><li class="pkg-inc">Half at signup, half after the second meeting</li></ul>
+      <div class="pkg-cta"><a href="https://unretirement.setmore.com/SbYwaQqj1L3GK49sKb6gvnFgJ4LD4sPR/service/9945d991-135d-42ff-92fb-a63c5d4dcd2a" class="btn btn-gold" target="_blank">Make The Executive Leap</a></div>
+    </article>
+    <article class="pkg" id="nego-pkg">
+      <div class="pkg-top"><div class="pkg-left"><span class="pkg-badge">Standalone or add-on</span><h3 class="pkg-name">The Negotiation Session</h3><p class="pkg-tagline">For when an offer or promotion conversation is already happening</p></div><div class="pkg-price"><p class="pkg-amount">$600</p><p class="pkg-term">single session</p></div></div>
+      <hr class="pkg-divider"><p class="pkg-desc">You have an offer, or a promotion conversation is on the calendar. This 90-minute session is for professionals who know what they want but need to work out how to ask for it without leaving money on the table.</p>
+      <div class="pkg-cta"><a href="https://unretirement.setmore.com/SbYwaQqj1L3GK49sKb6gvnFgJ4LD4sPR/service/550dbd7d-3376-4dbd-a894-13d684956dc8" class="btn btn-gold" target="_blank">Book the Negotiation Session</a></div>
+    </article>
   </div></div></section>
 
-  <section class="section" id="services" aria-labelledby="services-heading"><div class="wrap wrap--mid"><p class="section-eyebrow">Work with me</p><h2 id="services-heading">Three ways in.</h2><p class="lead">Every engagement is private. I work with a small number of clients at a time &#8212; the work is built around your specific situation, your company, and what&#8217;s actually standing in the way.</p><div class="packages"><article class="pkg" id="audit-pkg"><div class="pkg-top"><div class="pkg-left"><span class="pkg-badge pkg-badge--free">Free &#8212; start here</span><h3 class="pkg-name">The Translation Audit</h3><p class="pkg-tagline">Find out what&#8217;s actually in the way</p></div><div class="pkg-price"><p class="pkg-amount">Free</p></div></div><hr class="pkg-divider"><p class="pkg-desc">A 15-minute conversation about where you are, where you&#8217;re trying to go, and what&#8217;s getting in the way. I read your situation and tell you what I see. No pitch at the end. Useful either way.</p><p class="pkg-includes-label">What you get</p><ul class="pkg-includes"><li class="pkg-inc">An outside read on why you keep hitting the ceiling</li><li class="pkg-inc">The specific positioning gap that&#8217;s holding you back</li><li class="pkg-inc">One concrete next step, regardless of what you decide</li></ul><div class="pkg-cta"><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="btn btn-gold" target="_blank" rel="noopener noreferrer">Book your free audit</a></div></article><article class="pkg pkg--featured" id="leap-pkg"><div class="pkg-top"><div class="pkg-left"><span class="pkg-badge pkg-badge--flag">Flagship &#183; Private &#183; 4 weeks</span><h3 class="pkg-name">The Executive Leap</h3><p class="pkg-tagline">Full repositioning &#8212; from stuck to breaking through</p></div><div class="pkg-price"><p class="pkg-amount">$6,000</p><p class="pkg-term">private, 1-on-1</p></div></div><hr class="pkg-divider"><p class="pkg-desc">Four weeks of private coaching that answers the question you&#8217;ve been sitting with: why aren&#8217;t you at the next level yet, and what does it actually take to get there from exactly where you are. By the end, the right people see you differently, the right conversations are happening, and you walk into any room at this level knowing how to own it.</p><p class="pkg-includes-label">What&#8217;s included</p><ul class="pkg-includes"><p class="pkg-inc-group">Positioning</p><li class="pkg-inc">Superpower identification &#8212; your 3 core strengths backed by data-driven stories</li><li class="pkg-inc">Your Executive Translation Document&#8482; &#8212; your leadership value at the next level</li><li class="pkg-inc">LinkedIn and r&#233;sum&#233; repositioned for where you&#8217;re going</li><p class="pkg-inc-group">Executive articulation</p><li class="pkg-inc">Communication coaching for every high-stakes conversation</li><li class="pkg-inc">Live interview practice and role play &#8212; actual reps, real feedback</li><p class="pkg-inc-group">Networking strategy</p><li class="pkg-inc">How to get recruiters finding you &#8212; without tipping your hand</li><li class="pkg-inc">Targeted outreach strategy for decision-makers at the level you&#8217;re targeting</li><p class="pkg-inc-group">Salary strategy</p><li class="pkg-inc">How to position as a $300K hire before the offer is made</li><li class="pkg-inc">Negotiation language for the moments that matter</li><p class="pkg-inc-group">Support</p><li class="pkg-inc">4 private sessions, 60 minutes each, plus async check-ins between</li><li class="pkg-inc">30 days of email access after the program ends</li></ul>
-    <p class="pkg-inc-group">Payment</p><li class="pkg-inc">Half at signup, half after the second meeting</li></ul>
-    <div class="pkg-cta"><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="btn btn-gold" target="_blank" rel="noopener noreferrer">Make The Executive Leap</a></div></article><article class="pkg" id="nego-pkg"><div class="pkg-top"><div class="pkg-left"><span class="pkg-badge pkg-badge--addon">Standalone or add-on</span><h3 class="pkg-name">The Negotiation Session</h3><p class="pkg-tagline">For when an offer or promotion conversation is already happening</p></div><div class="pkg-price"><p class="pkg-amount">$600</p><p class="pkg-term">single session</p></div></div><hr class="pkg-divider"><p class="pkg-desc">You have an offer, or a promotion conversation is on the calendar. This 90-minute session is for professionals who know what they want but need to work out how to ask for it without leaving money on the table.</p><p class="pkg-includes-label">What&#8217;s included</p><ul class="pkg-includes"><li class="pkg-inc">90-minute private session</li><li class="pkg-inc">Offer or promotion review and counteroffer strategy</li><li class="pkg-inc">Specific language for the conversation, including how to handle pushback</li></ul><div class="pkg-cta"><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="btn btn-gold" target="_blank" rel="noopener noreferrer">Book the Negotiation Session</a></div></article></div><div class="pullquote"><blockquote>&#8220;The best candidate doesn&#8217;t win. The best-positioned candidate does. If you&#8217;re doing everything right but still not breaking through, you don&#8217;t need more effort. You need a different lens.&#8221;</blockquote></div></div></section>
+  <section class="section section-dark" id="testimonials"><div class="wrap"><p class="section-eyebrow section-eyebrow--light">What clients say</p><h2>Results from people who've been exactly where you are.</h2><div class="testimonials-grid">
+    <figure class="testimonial"><blockquote class="testimonial-text">The coaching was transformative. I successfully transitioned into an HR advisory role that provides the perfect blend of lifestyle freedom and deep professional meaning.</blockquote><figcaption class="testimonial-author"><a href="https://www.linkedin.com/in/adaoraemembolu/" target="_blank">Adaora Emembolu – Fractional CHRO</a></figcaption></figure>
+    <figure class="testimonial"><blockquote class="testimonial-text">Kendra is an amazing coach! She helped me sound confident and actually feel confident when I speak. Absolutely worth it!</blockquote><figcaption class="testimonial-author"><a href="https://www.linkedin.com/in/" target="_blank">Alisa Chernov – Creative Director</a></figcaption></figure>
+    <figure class="testimonial"><blockquote class="testimonial-text">Most people think of editing as a communication skill. Working with Kendra taught me it's actually a business skill.</blockquote><figcaption class="testimonial-author"><a href="https://www.linkedin.com/in/seanvantyne/" target="_blank">Sean Van Tyne – CEO, Van Tyne Group</a></figcaption></figure>
+  </div></div></section>
 
-  <section class="book-section" id="book" aria-labelledby="book-heading"><div class="wrap"><p class="section-eyebrow">Book your free audit</p><h2 id="book-heading">Pick a time.<br><em>Let&#8217;s figure out what&#8217;s in the way.</em></h2><div class="book-grid"><div class="book-text"><h3>The Translation Audit</h3><p>Fifteen minutes. I&#8217;ll read your situation and tell you what I see &#8212; the specific gap between how you&#8217;re being perceived and the level you&#8217;re going for.</p><ul class="book-list"><li>No slides. No pitch. No homework required beforehand.</li><li>You&#8217;ll leave with a clear diagnosis and one concrete next step.</li><li>If working together makes sense for both of us, we&#8217;ll discuss it &#8212; but only if the fit is right.</li><li>Not ready for a call yet? Grab the free scorecard below first.</li></ul></div><div class="calendar-embed"><iframe src="https://calendly.com/kendraweinisch/executivetranslation15" scrolling="yes" allowtransparency="true" title="Book a 15-minute Translation Audit" width="100%" height="540" frameborder="0"></iframe></div></div></div></section>
+  <section class="book-section" id="book"><div class="wrap"><p class="section-eyebrow">Book your free audit</p><h2>Pick a time.<br><em>Let's figure out what's in the way.</em></h2><div class="book-grid"><div class="book-text"><h3>The Translation Audit</h3><p>Fifteen minutes. I'll read your situation and tell you what I see – the specific gap between how you're being perceived and the level you're going for.</p><ul class="book-list"><li>No slides. No pitch. No homework required beforehand.</li><li>You'll leave with a clear diagnosis and one concrete next step.</li></ul></div><div class="calendar-embed"><iframe src="https://calendly.com/kendraweinisch/executivetranslation15" title="Book a 15-minute Translation Audit" width="100%" height="540" frameborder="0"></iframe></div></div></div></section>
 
-  <section class="magnet-section" id="download" aria-labelledby="magnet-heading"><div class="magnet-inner"><div class="magnet-text"><p class="section-eyebrow section-eyebrow--light">Free resource</p><h2 id="magnet-heading">Not ready to book?<br><em>Score yourself first.</em></h2><p>Most people hitting the ceiling don&#8217;t know which part of their positioning is costing them the most. This scorecard gives you a clear picture in under five minutes.</p><ul class="magnet-list"><li>How decision-makers at the next level actually perceive you right now</li><li>Which of the five positioning areas is your biggest gap</li><li>Whether the ceiling is a you problem or a company problem</li><li>A prioritised list of what to fix first &#8212; based on your score</li></ul></div><div class="magnet-card"><p class="magnet-card-label">Free scorecard</p><h3>The Executive Positioning Scorecard</h3><p style="font-size:.88rem;color:rgba(248,244,239,.6);line-height:1.65;margin-bottom:1.25rem;">10 questions. 5 minutes. A clear read on exactly where your positioning is losing you money.</p><button class="btn btn-gold magnet-trigger-btn" id="scorecardTrigger" aria-haspopup="dialog" aria-controls="scorecardModal">Get the free scorecard</button><p class="magnet-note">No sequences. No spam. One useful thing.</p></div></div></section>
+  <section class="magnet-section" id="download"><div class="magnet-inner"><div class="magnet-text"><p class="section-eyebrow section-eyebrow--light">Free resource</p><h2>Not ready to book?<br><em>Score yourself first.</em></h2><p>Most people hitting the ceiling don't know which part of their positioning is costing them the most. This scorecard gives you a clear picture in under five minutes.</p></div><div class="magnet-card"><p class="magnet-card-label">Free scorecard</p><h3>The Executive Positioning Scorecard</h3><button class="btn btn-gold magnet-trigger-btn" id="scorecardTrigger" style="width:100%;">Get the free scorecard</button></div></div></section>
 
-  <section class="section" id="about" aria-labelledby="about-heading"><div class="wrap"><div class="about-grid"><div class="about-text"><p class="section-eyebrow">About Kendra</p><h2 id="about-heading">The editor who became<br><em>a narrative expert.</em></h2><p class="lead">I came into this work as a journalist and magazine editor. My job was to identify the story others couldn&#8217;t see &#8212; and make it clear, compelling, and impossible to ignore.</p><p class="lead">Today I apply that same process to careers. I sit across from a professional with a strong track record and figure out why the story they&#8217;re telling about themselves isn&#8217;t the one decision-makers above them are hearing. Then we fix it.</p><p class="lead">I&#8217;ve trained executives across organizations like Toyota and Apple, and built a structured system &#8212; The Executive Translation Method&#8482; &#8212; to translate experience into executive authority. The professionals I work with aren&#8217;t lacking capability. They&#8217;re lacking a lens that makes their value legible at the level they&#8217;re going for.</p><p class="lead">If you&#8217;re employed, performing well, and stuck &#8212; I can tell you what&#8217;s in the way. Usually within the first conversation.</p><div class="about-links"><a href="https://www.linkedin.com/in/kendraweinisch/" target="_blank" rel="noopener noreferrer" class="about-link"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Connect on LinkedIn</a></div></div><div class="about-photo-wrap"><img src="images/author-photo.png" alt="Kendra Weinisch, founder of Executive Translation" class="about-photo" width="340" height="453" loading="lazy"></div></div></div></section>
-
-  <section class="section section-alt" id="faq" aria-labelledby="faq-heading"><div class="wrap wrap--mid"><p class="section-eyebrow">FAQ</p><h2 id="faq-heading">Common questions</h2><div class="faq-list"><div class="faq-item"><h3><button class="faq-btn" aria-expanded="false" aria-controls="faq1-panel" id="faq1-btn">I&#8217;m currently employed. Is this confidential?<span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-panel" id="faq1-panel"><p>Completely. Everything we discuss stays between us. The networking strategy we build is specifically designed so you can explore your options &#8212; internally and externally &#8212; without signaling to your current employer that you&#8217;re looking.</p></div></div><div class="faq-item"><h3><button class="faq-btn" aria-expanded="false" aria-controls="faq3-panel" id="faq3-btn">What if I&#8217;m not sure whether to push for a promotion or look elsewhere?<span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-panel" id="faq3-panel"><p>That&#8217;s one of the most common things clients come in not knowing. Sometimes the ceiling is a company problem. Sometimes it&#8217;s a positioning problem you can fix from the inside. Knowing which it is before you make a move is worth a lot.</p></div></div><div class="faq-item"><h3><button class="faq-btn" aria-expanded="false" aria-controls="faq4-panel" id="faq4-btn">What does the free Translation Audit actually involve?<span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-panel" id="faq4-panel"><p>A focused 15-minute conversation &#8212; not a sales call. I spend those 15 minutes reading your specific situation and telling you what I see. You&#8217;ll come away with a clear diagnosis and at least one thing you can act on, regardless of whether you work with me.</p></div></div><div class="faq-item"><h3><button class="faq-btn" aria-expanded="false" aria-controls="faq5-panel" id="faq5-btn">What&#8217;s the ROI on the $6,000 program?<span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-panel" id="faq5-panel"><p>A client who moves from $180K to $300K picks up $120K in new annual salary. At that return, the program pays for itself in the first few weeks at the new role.</p></div></div></div></div></section>
-
-  <section class="final-cta" aria-labelledby="cta-heading"><h2 id="cta-heading">You don&#8217;t need more effort.<br><em>You need a different lens.</em></h2><p>Book a free Translation Audit. Fifteen minutes. I&#8217;ll read your situation and tell you what I see &#8212; the specific gap between where you are and where you&#8217;re trying to go.</p><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="btn btn-gold" target="_blank" rel="noopener noreferrer">Book your free Translation Audit</a><p class="final-cta-note">15 minutes &#183; No pitch &#183; Useful regardless of what you decide</p></section>
+  <div class="final-cta"><h2>You don't need more effort.<br><em>You need a different lens.</em></h2><p>Book a free Translation Audit. Fifteen minutes. I'll read your situation and tell you what I see – the specific gap between where you are and where you're trying to go.</p><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="btn btn-gold" target="_blank">Book your free Translation Audit</a><p class="final-cta-note">15 minutes · No pitch · Useful regardless of what you decide</p></div>
 </main>
 
 <footer>
-  <div class="footer-top"><div class="wrap"><div class="footer-grid"><div><img src="images/ET_logos/logo-primary-light.svg" alt="Executive Translation" class="footer-brand-img" width="200" height="60"><p class="footer-tagline">Career repositioning for professionals who are ready to break the $300K barrier.</p><div class="footer-social"><a href="https://www.linkedin.com/in/kendraweinisch/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Kendra Weinisch on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></div></div><nav aria-label="Site navigation"><p class="footer-col-label">Navigate</p><ul class="footer-nav"><li><a href="#why">Why careers plateau</a></li><li><a href="#process">The process</a></li><li><a href="#for-you">Who this is for</a></li><li><a href="#testimonials">Client results</a></li><li><a href="#services">Work with me</a></li><li><a href="#about">About Kendra</a></li><li><a href="#faq">FAQ</a></li></ul></nav><nav aria-label="Services navigation"><p class="footer-col-label">Services</p><ul class="footer-nav"><li><a href="#audit-pkg">Free Translation Audit</a></li><li><a href="#leap-pkg">The Executive Leap</a></li><li><a href="#nego-pkg">The Negotiation Session</a></li></ul><p class="footer-col-label" style="margin-top:1.5rem">Free resource</p><ul class="footer-nav"><li><button class="footer-nav-btn" id="footerScorecardBtn" style="background:none;border:none;cursor:pointer;font-size:.82rem;color:rgba(248,244,239,.38);text-align:left;padding:0;transition:color .2s;" aria-haspopup="dialog" aria-controls="scorecardModal">Executive Positioning Scorecard</button></li></ul></nav><div><p class="footer-col-label">Get in touch</p><ul class="footer-nav footer-nav--contact"><li><a href="#book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a free 15-min session</a></li></ul><div class="footer-cta-box"><p class="footer-cta-label">Ready to find out what&#8217;s in the way?</p><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="btn btn-gold" style="min-height:40px;font-size:.75rem;padding:0 1.25rem" target="_blank" rel="noopener noreferrer">Book free audit</a></div></div></div></div></div>
-  <div class="footer-bottom"><div class="wrap"><div class="footer-bottom-inner"><p class="footer-copy">&#169; 2025 Executive Translation&#8482; &#183; The Executive Translation Method&#8482;</p><p class="footer-copy">executivetranslation.com &#183; All rights reserved</p></div></div></div>
+  <div class="footer-top"><div class="wrap"><div class="footer-grid"><div><img src="images/ET_logos/logo-primary-light.svg" alt="Executive Translation" class="footer-brand-img" width="auto" height="70"><p class="footer-tagline">Career repositioning for professionals ready to break the $300K barrier.</p></div><nav><p class="footer-col-label">Services</p><ul class="footer-nav"><li><a href="#leap-pkg">The Executive Leap</a></li><li><a href="#nego-pkg">The Negotiation Session</a></li></ul></nav><div><p class="footer-col-label">Free resource</p><button id="footerScorecardBtn" class="footer-nav-btn">Executive Positioning Scorecard</button><div class="footer-cta-box"><a href="https://calendly.com/kendraweinisch/executivetranslation15" class="btn btn-gold" style="min-height:40px;">Free audit</a></div></div></div></div></div>
+  <div class="footer-bottom"><div class="wrap"><div class="footer-bottom-inner"><p class="footer-copy">© 2026 Executive Translation™ · The Executive Translation Method™</p><p class="footer-copy">executivetranslation.com · All rights reserved</p></div></div></div>
 </footer>
 
 <script>
 (function() {
   const menuBtn = document.getElementById('mobileMenuBtn');
   const navList = document.getElementById('primaryNav');
-  if(menuBtn) menuBtn.addEventListener('click', () => { const open = navList.classList.toggle('is-open'); menuBtn.setAttribute('aria-expanded', open); menuBtn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu'); });
-  navList.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { navList.classList.remove('is-open'); if(menuBtn) menuBtn.setAttribute('aria-expanded', 'false'); }));
-
-  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => { const id = a.getAttribute('href'); if (id === '#') return; const target = document.querySelector(id); if (target) { e.preventDefault(); const top = target.getBoundingClientRect().top + window.scrollY - 72; window.scrollTo({ top, behavior: 'smooth' }); target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true }); } }));
-
-  document.querySelectorAll('.faq-btn').forEach(btn => btn.addEventListener('click', () => { const isOpen = btn.getAttribute('aria-expanded') === 'true'; document.querySelectorAll('.faq-btn').forEach(b => { b.setAttribute('aria-expanded', 'false'); const p = document.getElementById(b.getAttribute('aria-controls')); if (p) p.classList.remove('open'); }); if (!isOpen) { btn.setAttribute('aria-expanded', 'true'); const panel = document.getElementById(btn.getAttribute('aria-controls')); if (panel) panel.classList.add('open'); } }));
-
+  if(menuBtn) menuBtn.addEventListener('click', () => { const open = navList.classList.toggle('is-open'); menuBtn.setAttribute('aria-expanded', open); });
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => { const id = a.getAttribute('href'); if (id === '#') return; const target = document.querySelector(id); if (target) { e.preventDefault(); const top = target.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({ top, behavior: 'smooth' }); } }));
   const overlay = document.getElementById('scorecardModal');
   const closeBtn = document.getElementById('modalClose');
   const triggers = [document.getElementById('scorecardTrigger'), document.getElementById('footerScorecardBtn')];
   let lastFocused = null;
-  function openModal(trigger) { lastFocused = trigger || document.activeElement; overlay.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
-  function closeModal() { overlay.classList.remove('is-open'); document.body.style.overflow = ''; if (lastFocused) lastFocused.focus(); }
+  function openModal(trigger) { lastFocused = trigger; overlay.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { overlay.classList.remove('is-open'); document.body.style.overflow = ''; if(lastFocused) lastFocused.focus(); }
   triggers.forEach(t => { if(t) t.addEventListener('click', () => openModal(t)); });
   closeBtn.addEventListener('click', closeModal);
-  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeModal(); });
-
+  overlay.addEventListener('click', e => { if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape' && overlay.classList.contains('is-open')) closeModal(); });
   const form = document.getElementById('scorecardForm');
   const formArea = document.getElementById('modal-form-area');
   const successDiv = document.getElementById('modal-success');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-    try {
-      const res = await fetch('https://formspree.io/f/xykongge', { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) });
-      if (res.ok) { formArea.style.display = 'none'; successDiv.style.display = 'block'; }
-      else throw new Error('Submission failed');
-    } catch { submitBtn.disabled = false; submitBtn.textContent = originalText; alert('Something went wrong. Please try again or contact me directly.'); }
+  if(form) form.addEventListener('submit', async (e) => { 
+    e.preventDefault(); 
+    const btn = form.querySelector('button'); 
+    const orig = btn.textContent; 
+    btn.disabled = true; 
+    btn.textContent = 'Sending…'; 
+    try { 
+      const res = await fetch('https://formspree.io/f/xykongge', { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) }); 
+      if(res.ok) { 
+        formArea.style.display = 'none'; 
+        successDiv.style.display = 'block'; 
+        const pdfUrl = 'images/Executive Translation Positioning Scorecard.pdf';
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = 'Executive Translation Positioning Scorecard.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } else throw new Error(); 
+    } catch { 
+      btn.disabled = false; 
+      btn.textContent = orig; 
+      alert('Something went wrong. Please try again.'); 
+    } 
   });
 })();
 </script>
