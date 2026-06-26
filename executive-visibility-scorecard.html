@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Visibility Scorecard | Executive Translation</title>
+  <meta name="description" content="Take the Executive Visibility Scorecard to assess your leadership positioning and discover what's blocking your next promotion.">
+  <meta name="author" content="Kendra Weinisch | Executive Translation">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* === BASE === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #141210;
+      --ink-mid: #3d3730;
+      --ink-light: #5e554b;
+      --cream: #f8f4ef;
+      --cream-mid: #ede8e0;
+      --cream-dark: #d6cec2;
+      --gold: #9a7b4f;
+      --gold-light: #b38f5c;
+      --gold-dark: #7a5f3d;
+      --gold-pale: rgba(154,123,79,.12);
+      --rule: rgba(20,18,16,.12);
+      --white: #ffffff;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Outfit', system-ui, sans-serif;
+      --max: 1100px;
+      --gutter: clamp(1.25rem, 5vw, 3rem);
+      --focus-ring: 0 0 0 3px rgba(154,123,79,.7);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--ink); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .skip-link { position: absolute; top: -100%; left: 1rem; z-index: 9999; background: var(--gold-dark); color: var(--white); padding: .6rem 1.2rem; font-size: .85rem; font-weight: 600; border-radius: 0 0 4px 4px; text-decoration: none; transition: top .2s; }
+    .skip-link:focus { top: 0; }
+    :focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: 2px; }
+    :focus:not(:focus-visible) { outline: none; }
+
+    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+    .wrap--mid { max-width: 860px; }
+    .wrap--narrow { max-width: 680px; }
+
+    /* === NAV === */
+    .site-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      background: rgba(248,244,239,.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: .85rem var(--gutter); max-width: var(--max); margin: 0 auto;
+    }
+    .nav-brand img { display: block; height: 80px; width: auto; }
+    .nav-brand:focus-visible { box-shadow: var(--focus-ring); border-radius: 2px; }
+    .nav-list { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
+    .nav-list a { font-size: .78rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color .2s; }
+    .nav-list a:hover { color: var(--ink); }
+    .nav-cta-link {
+      font-size: .78rem !important; font-weight: 600 !important;
+      color: var(--white) !important; background: var(--gold-dark);
+      padding: .45rem 1.1rem; border-radius: 2px;
+      text-transform: uppercase !important; letter-spacing: .06em !important;
+      text-decoration: none; transition: background .2s; display: inline-block;
+    }
+    .nav-cta-link:hover { background: var(--gold); }
+    .mobile-btn {
+      display: none; background: none; border: 2px solid transparent;
+      font-size: 1.4rem; cursor: pointer; color: var(--ink);
+      padding: .35rem .45rem; line-height: 1; border-radius: 2px;
+    }
+    .mobile-btn[aria-expanded="true"] .icon-menu { display: none; }
+    .mobile-btn[aria-expanded="false"] .icon-close { display: none; }
+
+    /* === BUTTONS === */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--sans); font-size: .82rem; font-weight: 600;
+      letter-spacing: .07em; text-transform: uppercase; text-decoration: none;
+      cursor: pointer; border: none; transition: all .25s;
+      min-height: 48px; padding: 0 1.75rem; border-radius: 2px;
+    }
+    .btn-primary { background: var(--ink); color: var(--cream); }
+    .btn-primary:hover { background: var(--ink-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(20,18,16,.18); }
+    .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+    .btn-ghost:hover { border-color: var(--ink-mid); transform: translateY(-2px); }
+    .btn-gold { background: var(--gold-dark); color: var(--white); }
+    .btn-gold:hover { background: var(--gold); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(154,123,79,.3); }
+    .btn-full { width: 100%; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
+
+    /* === SCORECARD LAYOUT === */
+    .scorecard-hero {
+      padding: 9rem var(--gutter) 4rem;
+      background: var(--ink);
+      color: var(--cream);
+      text-align: center;
+    }
+    .scorecard-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .scorecard-hero h1 em { color: var(--gold-light); font-style: italic; }
+    .scorecard-hero .sub {
+      font-size: 1.1rem;
+      color: rgba(248,244,239,.7);
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .scorecard-container {
+      padding: 3rem var(--gutter) 5rem;
+      background: var(--cream);
+    }
+
+    .scorecard-form {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 6px;
+      box-shadow: 0 8px 40px rgba(20,18,16,.08);
+      padding: 2.5rem 3rem;
+      border: 1px solid var(--cream-dark);
+    }
+
+    .section-block {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .section-block:last-of-type { border-bottom: none; margin-bottom: 0; }
+
+    .section-label {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 0.25rem;
+    }
+    .section-sub {
+      font-size: .78rem;
+      color: var(--ink-light);
+      margin-bottom: 1.25rem;
+      letter-spacing: .02em;
+    }
+
+    .question {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid rgba(20,18,16,.05);
+    }
+    .question:last-child { border-bottom: none; }
+    .question-label {
+      font-size: .92rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+    }
+    .question-label small {
+      font-weight: 400;
+      color: var(--ink-light);
+      font-size: .8rem;
+      display: block;
+      margin-top: 2px;
+    }
+    .question-options {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 0.3rem;
+    }
+    .question-options label {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: .85rem;
+      cursor: pointer;
+      background: var(--cream);
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      border: 1px solid transparent;
+      transition: all .15s;
+    }
+    .question-options label:hover { background: var(--cream-mid); }
+    .question-options input[type="radio"] {
+      accent-color: var(--gold);
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+    }
+    .question-options input[type="radio"]:checked + span { font-weight: 600; color: var(--gold); }
+    .question-options label:has(input:checked) {
+      background: var(--gold-pale);
+      border-color: var(--gold);
+    }
+
+    /* === RESULTS === */
+    .results-container {
+      display: none;
+      max-width: 820px;
+      margin: 2rem auto 0;
+      background: var(--white);
+      border-radius: 6px;
+      box-shadow: 0 8px 40px rgba(20,18,16,.08);
+      padding: 2.5rem 3rem;
+      border: 2px solid var(--gold);
+    }
+    .results-container.visible { display: block; }
+
+    .result-score {
+      text-align: center;
+      padding: 1.5rem 0;
+      border-bottom: 2px solid var(--cream-dark);
+      margin-bottom: 2rem;
+    }
+    .result-number {
+      font-family: var(--serif);
+      font-size: 4rem;
+      font-weight: 500;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .result-label {
+      font-size: 1.1rem;
+      color: var(--ink-mid);
+      margin-top: 0.25rem;
+    }
+    .result-tier {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .result-breakdown {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .result-section-score {
+      background: var(--cream);
+      padding: 0.8rem 1rem;
+      border-radius: 4px;
+      border-left: 3px solid var(--gold);
+    }
+    .result-section-score .label { font-size: .78rem; font-weight: 600; color: var(--ink-light); }
+    .result-section-score .value { font-size: 1.2rem; font-weight: 600; color: var(--ink); }
+
+    .result-interp {
+      background: var(--gold-pale);
+      padding: 1.25rem 1.5rem;
+      border-radius: 4px;
+      margin: 1.5rem 0;
+      border-left: 3px solid var(--gold);
+    }
+    .result-interp p { margin-bottom: 0.5rem; }
+    .result-interp p:last-child { margin-bottom: 0; }
+
+    .result-cta {
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cream-dark);
+      margin-top: 1.5rem;
+    }
+    .result-cta p { margin-bottom: 1rem; color: var(--ink-mid); }
+
+    /* === FOOTER === */
+    .footer-top { background: var(--ink); padding: 5rem var(--gutter) 4rem; border-top: 1px solid rgba(248,244,239,.06); }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 4rem; }
+    .footer-brand-img { display: block; height: 70px; width: auto; margin-bottom: 1rem; }
+    .footer-tagline { font-size: .85rem; color: rgba(248,244,239,.55); line-height: 1.65; margin-bottom: 1.5rem; max-width: 240px; }
+    .footer-col-label { font-size: .62rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); margin-bottom: .85rem; opacity: .8; }
+    .footer-nav { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .footer-nav a { font-size: .82rem; color: rgba(248,244,239,.65); text-decoration: none; transition: color .2s; }
+    .footer-nav a:hover { color: rgba(248,244,239,.9); }
+    .footer-cta-box { margin-top: 1.75rem; padding: 1.25rem; background: rgba(154,123,79,.15); border: 1px solid rgba(154,123,79,.25); border-radius: 4px; }
+    .footer-bottom { background: rgba(0,0,0,.35); padding: 1.25rem var(--gutter); }
+    .footer-bottom-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+    .footer-copy { font-size: .7rem; color: rgba(248,244,239,.6); }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 960px) {
+      .nav-list { display: none; }
+      .nav-list.is-open { display: flex; flex-direction: column; position: fixed; top: 80px; left: 0; right: 0; background: var(--cream); padding: 1.5rem; border-bottom: 1px solid var(--rule); z-index: 199; }
+      .mobile-btn { display: block; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .scorecard-form { padding: 1.5rem; }
+      .results-container { padding: 1.5rem; }
+      .result-breakdown { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .question-options label { font-size: .78rem; padding: 0.15rem 0.6rem; }
+      .scorecard-hero { padding: 7rem var(--gutter) 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- === NAV === -->
+<header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="Executive Translation">
+        <img src="images/ET_logos/logo-primary-light.svg" alt="Executive Translation" width="auto" height="80">
+      </a>
+      <button class="mobile-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false">
+        <span class="icon-menu">☰</span><span class="icon-close">✕</span>
+      </button>
+      <ul class="nav-list" id="primaryNav">
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#process">Method</a></li>
+        <li><a href="/#testimonials">Testimonials</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/#book" class="nav-cta-link">Free consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <!-- === HERO === -->
+  <section class="scorecard-hero">
+    <div class="wrap wrap--mid">
+      <p style="color:var(--gold-light); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; margin-bottom:1rem;">Executive Translation™</p>
+      <h1>Executive Visibility <em>Scorecard</em></h1>
+      <p class="sub">Answer 16 questions to assess how visible you are to decision-makers and discover exactly what's blocking your next promotion.</p>
+    </div>
+  </section>
+
+  <!-- === SCORECARD FORM === -->
+  <section class="scorecard-container">
+    <div class="scorecard-form" id="scorecardForm">
+      <form id="quizForm" novalidate>
+        <!-- SECTION 1 -->
+        <div class="section-block">
+          <div class="section-label">Section 1: LinkedIn Clarity</div>
+          <div class="section-sub">0-4 points per question</div>
+
+          <div class="question">
+            <div class="question-label">1. Your headline clearly communicates leadership value (not job title only).<br><small>0 = job title only &nbsp;·&nbsp; 4 = clearly signals leadership scope + outcomes</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q1" value="0"> 0</label>
+              <label><input type="radio" name="q1" value="1"> 1</label>
+              <label><input type="radio" name="q1" value="2"> 2</label>
+              <label><input type="radio" name="q1" value="3"> 3</label>
+              <label><input type="radio" name="q1" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">2. Your About section explains what problems you solve at a leadership level.<br><small>0 = missing or generic &nbsp;·&nbsp; 4 = clearly positioned for senior roles</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q2" value="0"> 0</label>
+              <label><input type="radio" name="q2" value="1"> 1</label>
+              <label><input type="radio" name="q2" value="2"> 2</label>
+              <label><input type="radio" name="q2" value="3"> 3</label>
+              <label><input type="radio" name="q2" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">3. Your experience section shows measurable business impact (not duties).<br><small>0 = task-based &nbsp;·&nbsp; 4 = outcome-based with metrics</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q3" value="0"> 0</label>
+              <label><input type="radio" name="q3" value="1"> 1</label>
+              <label><input type="radio" name="q3" value="2"> 2</label>
+              <label><input type="radio" name="q3" value="3"> 3</label>
+              <label><input type="radio" name="q3" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">4. A recruiter or executive can understand your seniority in under 10 seconds.<br><small>0 = unclear &nbsp;·&nbsp; 4 = instantly obvious</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q4" value="0"> 0</label>
+              <label><input type="radio" name="q4" value="1"> 1</label>
+              <label><input type="radio" name="q4" value="2"> 2</label>
+              <label><input type="radio" name="q4" value="3"> 3</label>
+              <label><input type="radio" name="q4" value="4"> 4</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="section-block">
+          <div class="section-label">Section 2: Leadership Signal Strength</div>
+          <div class="section-sub">0-4 points per question</div>
+
+          <div class="question">
+            <div class="question-label">5. Your profile reflects strategic leadership, not execution-only work.<br><small>0 = execution-heavy &nbsp;·&nbsp; 4 = strong strategic framing</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q5" value="0"> 0</label>
+              <label><input type="radio" name="q5" value="1"> 1</label>
+              <label><input type="radio" name="q5" value="2"> 2</label>
+              <label><input type="radio" name="q5" value="3"> 3</label>
+              <label><input type="radio" name="q5" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">6. You have visible proof of decision-making influence.<br><small>0 = none &nbsp;·&nbsp; 4 = clear examples of decisions, ownership, or leadership impact</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q6" value="0"> 0</label>
+              <label><input type="radio" name="q6" value="1"> 1</label>
+              <label><input type="radio" name="q6" value="2"> 2</label>
+              <label><input type="radio" name="q6" value="3"> 3</label>
+              <label><input type="radio" name="q6" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">7. Your career story clearly shows progression toward leadership roles.<br><small>0 = fragmented &nbsp;·&nbsp; 4 = coherent upward narrative</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q7" value="0"> 0</label>
+              <label><input type="radio" name="q7" value="1"> 1</label>
+              <label><input type="radio" name="q7" value="2"> 2</label>
+              <label><input type="radio" name="q7" value="3"> 3</label>
+              <label><input type="radio" name="q7" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">8. You sound like someone who leads, not someone who "supports."<br><small>0 = support role framing &nbsp;·&nbsp; 4 = leadership identity established</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q8" value="0"> 0</label>
+              <label><input type="radio" name="q8" value="1"> 1</label>
+              <label><input type="radio" name="q8" value="2"> 2</label>
+              <label><input type="radio" name="q8" value="3"> 3</label>
+              <label><input type="radio" name="q8" value="4"> 4</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3 -->
+        <div class="section-block">
+          <div class="section-label">Section 3: Visibility & Discovery</div>
+          <div class="section-sub">0-4 points per question</div>
+
+          <div class="question">
+            <div class="question-label">9. You show up in recruiter searches for roles one level above your current position.<br><small>0 = no visibility &nbsp;·&nbsp; 4 = strong discoverability</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q9" value="0"> 0</label>
+              <label><input type="radio" name="q9" value="1"> 1</label>
+              <label><input type="radio" name="q9" value="2"> 2</label>
+              <label><input type="radio" name="q9" value="3"> 3</label>
+              <label><input type="radio" name="q9" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">10. You are regularly contacted for opportunities aligned to your target level.<br><small>0 = rarely &nbsp;·&nbsp; 4 = frequently</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q10" value="0"> 0</label>
+              <label><input type="radio" name="q10" value="1"> 1</label>
+              <label><input type="radio" name="q10" value="2"> 2</label>
+              <label><input type="radio" name="q10" value="3"> 3</label>
+              <label><input type="radio" name="q10" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">11. Your LinkedIn activity reinforces authority (posts, commentary, insights).<br><small>0 = inactive &nbsp;·&nbsp; 4 = consistent authority signals</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q11" value="0"> 0</label>
+              <label><input type="radio" name="q11" value="1"> 1</label>
+              <label><input type="radio" name="q11" value="2"> 2</label>
+              <label><input type="radio" name="q11" value="3"> 3</label>
+              <label><input type="radio" name="q11" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">12. Your network includes decision-makers, not just peers.<br><small>0 = peers only &nbsp;·&nbsp; 4 = strong executive-level network</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q12" value="0"> 0</label>
+              <label><input type="radio" name="q12" value="1"> 1</label>
+              <label><input type="radio" name="q12" value="2"> 2</label>
+              <label><input type="radio" name="q12" value="3"> 3</label>
+              <label><input type="radio" name="q12" value="4"> 4</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4 -->
+        <div class="section-block">
+          <div class="section-label">Section 4: Promotion Readiness Signals</div>
+          <div class="section-sub">0-4 points per question</div>
+
+          <div class="question">
+            <div class="question-label">13. Your resume/LinkedIn clearly supports a move into management.<br><small>0 = IC framing &nbsp;·&nbsp; 4 = management-ready positioning</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q13" value="0"> 0</label>
+              <label><input type="radio" name="q13" value="1"> 1</label>
+              <label><input type="radio" name="q13" value="2"> 2</label>
+              <label><input type="radio" name="q13" value="3"> 3</label>
+              <label><input type="radio" name="q13" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">14. You can articulate your leadership value in one sentence.<br><small>0 = unclear &nbsp;·&nbsp; 4 = strong, repeatable narrative</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q14" value="0"> 0</label>
+              <label><input type="radio" name="q14" value="1"> 1</label>
+              <label><input type="radio" name="q14" value="2"> 2</label>
+              <label><input type="radio" name="q14" value="3"> 3</label>
+              <label><input type="radio" name="q14" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">15. You have documented business impact tied to leadership outcomes.<br><small>0 = none &nbsp;·&nbsp; 4 = strong quantified impact</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q15" value="0"> 0</label>
+              <label><input type="radio" name="q15" value="1"> 1</label>
+              <label><input type="radio" name="q15" value="2"> 2</label>
+              <label><input type="radio" name="q15" value="3"> 3</label>
+              <label><input type="radio" name="q15" value="4"> 4</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-label">16. You are being actively considered for roles above your current level.<br><small>0 = no &nbsp;·&nbsp; 4 = yes, consistently</small></div>
+            <div class="question-options">
+              <label><input type="radio" name="q16" value="0"> 0</label>
+              <label><input type="radio" name="q16" value="1"> 1</label>
+              <label><input type="radio" name="q16" value="2"> 2</label>
+              <label><input type="radio" name="q16" value="3"> 3</label>
+              <label><input type="radio" name="q16" value="4"> 4</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-full" id="submitBtn" style="margin-top: 1.5rem;">Calculate My Score →</button>
+      </form>
+    </div>
+
+    <!-- === RESULTS === -->
+    <div class="results-container" id="resultsContainer">
+      <div class="result-score">
+        <div class="result-number" id="resultNumber">0</div>
+        <div class="result-label">out of 64</div>
+        <div class="result-tier" id="resultTier">—</div>
+      </div>
+
+      <div class="result-breakdown" id="resultBreakdown">
+        <div class="result-section-score"><div class="label">Section 1: LinkedIn Clarity</div><div class="value" id="s1Score">0 / 16</div></div>
+        <div class="result-section-score"><div class="label">Section 2: Leadership Signal</div><div class="value" id="s2Score">0 / 16</div></div>
+        <div class="result-section-score"><div class="label">Section 3: Visibility & Discovery</div><div class="value" id="s3Score">0 / 16</div></div>
+        <div class="result-section-score"><div class="label">Section 4: Promotion Readiness</div><div class="value" id="s4Score">0 / 16</div></div>
+      </div>
+
+      <div class="result-interp" id="resultInterpretation">
+        <p><strong>Your score indicates:</strong></p>
+        <p id="interpText">—</p>
+      </div>
+
+      <div class="result-cta">
+        <p><strong>Want a full breakdown of exactly what's blocking your promotion path?</strong></p>
+        <a href="/#book" class="btn btn-gold">Book Your Free Consultation →</a>
+        <p style="font-size:.75rem; color:var(--ink-light); margin-top:.75rem;">15 minutes · No pitch · Useful regardless of your score</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- === FOOTER === -->
+<footer>
+  <div class="footer-top">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <img src="images/ET_logos/logo-primary-light.svg" alt="Executive Translation" class="footer-brand-img" width="auto" height="70">
+          <p class="footer-tagline">Career repositioning for professionals ready to break through to the next level.</p>
+        </div>
+        <nav>
+          <p class="footer-col-label">Services</p>
+          <ul class="footer-nav">
+            <li><a href="/executive-positioning">Executive Positioning</a></li>
+            <li><a href="/board-advisory-transition">Board & Advisory Transition</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <p class="footer-col-label">Company</p>
+          <ul class="footer-nav">
+            <li><a href="/#about">About Kendra</a></li>
+            <li><a href="/#testimonials">Testimonials</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer-col-label">Free resource</p>
+          <a href="/executive-visibility-scorecard" style="font-size:.82rem; color:rgba(248,244,239,.65); text-decoration:none; transition:color .2s;">Executive Visibility Scorecard</a>
+          <div class="footer-cta-box">
+            <a href="/#book" class="btn btn-gold" style="min-height:40px;">Free consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <div class="footer-bottom-inner">
+        <p class="footer-copy">© 2026 Executive Translation™ · The Executive Translation Method™</p>
+        <p class="footer-copy">executivetranslation.com · All rights reserved</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// === MOBILE NAV ===
+document.getElementById('mobileMenuBtn')?.addEventListener('click', function() {
+  const nav = document.getElementById('primaryNav');
+  const open = nav.classList.toggle('is-open');
+  this.setAttribute('aria-expanded', open);
+});
+
+// === QUIZ LOGIC ===
+document.getElementById('quizForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = this;
+  const questions = 16;
+  const sectionSize = 4;
+  const sectionScores = [0, 0, 0, 0];
+  let total = 0;
+  let allAnswered = true;
+
+  for (let i = 1; i <= questions; i++) {
+    const name = 'q' + i;
+    const selected = form.querySelector(`input[name="${name}"]:checked`);
+    if (!selected) {
+      allAnswered = false;
+      continue;
+    }
+    const val = parseInt(selected.value, 10);
+    total += val;
+    const sectionIdx = Math.floor((i - 1) / sectionSize);
+    sectionScores[sectionIdx] += val;
+  }
+
+  if (!allAnswered) {
+    alert('Please answer all 16 questions before calculating your score.');
+    return;
+  }
+
+  document.getElementById('resultNumber').textContent = total;
+  document.getElementById('s1Score').textContent = sectionScores[0] + ' / 16';
+  document.getElementById('s2Score').textContent = sectionScores[1] + ' / 16';
+  document.getElementById('s3Score').textContent = sectionScores[2] + ' / 16';
+  document.getElementById('s4Score').textContent = sectionScores[3] + ' / 16';
+
+  let tier, interp;
+  if (total <= 30) {
+    tier = '"Invisible Operator"';
+    interp = 'You are performing well but not positioned for leadership perception. You are likely being evaluated at your current level, not your potential level. Your issue is not effort—it is positioning clarity.';
+  } else if (total <= 44) {
+    tier = '"Underpositioned Executive"';
+    interp = 'You have capability, but weak narrative + visibility. You are close, but not legible as leadership-ready externally. A strategic repositioning could unlock the next level.';
+  } else if (total <= 55) {
+    tier = '"Emerging Leader"';
+    interp = 'You are partially visible but inconsistent. You are in transition, but signals are mixed. Focused translation work could accelerate your path significantly.';
+  } else {
+    tier = '"Leadership-Ready / Executive Magnet"';
+    interp = 'You are positioned correctly but may be under-distributed. Small visibility improvements could unlock major opportunities. You\'re closer than you think.';
+  }
+
+  if (total < 50) {
+    interp += ' Most executives in this range are doing the work of senior leaders but not being interpreted that way. They lack translation, not talent.';
+  }
+
+  document.getElementById('resultTier').textContent = tier;
+  document.getElementById('interpText').textContent = interp;
+
+  const results = document.getElementById('resultsContainer');
+  results.classList.add('visible');
+  results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  setTimeout(() => { btn.disabled = false; }, 1000);
+});
+</script>
+</body>
+</html>
