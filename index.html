@@ -364,6 +364,7 @@
       display: flex;
       align-items: center;
       gap: .75rem;
+      flex-wrap: wrap;
     }
 
     .hero-eyebrow::before {
@@ -372,6 +373,29 @@
       width: 32px;
       height: 1px;
       background: var(--gold-dark);
+    }
+
+    .hero-eyebrow .book-badge {
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--ink-light);
+      font-size: .65rem;
+      background: var(--gold-pale);
+      padding: .2rem .6rem;
+      border-radius: 20px;
+      border: 1px solid var(--cream-dark);
+    }
+
+    .hero-eyebrow .book-badge a {
+      color: var(--gold-dark);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 500;
+    }
+
+    .hero-eyebrow .book-badge a:hover {
+      color: var(--gold);
     }
 
     .hero h1 {
@@ -1172,6 +1196,55 @@
       color: var(--ink-mid);
     }
 
+    /* FAQ book card */
+    .faq-book-card {
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-radius: 4px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .faq-book-cover {
+      width: 100%;
+      max-width: 100px;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 8px 24px rgba(20, 18, 16, .12);
+      display: block;
+    }
+
+    .faq-book-content p {
+      color: var(--ink-mid);
+      font-size: .95rem;
+      margin-bottom: .75rem;
+    }
+
+    .faq-book-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-book-content strong {
+      color: var(--ink);
+    }
+
+    @media (max-width: 600px) {
+      .faq-book-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .faq-book-cover {
+        max-width: 120px;
+        margin: 0 auto;
+      }
+    }
+
     /* Footer */
     .footer-top {
       background: var(--ink);
@@ -1372,7 +1445,12 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="hero-eyebrow">Executive Translation</p>
+          <p class="hero-eyebrow">
+            Executive Translation
+            <span class="book-badge">
+              📖 <a href="https://www.amazon.com/Executive-Translation-Influence-Method-Indispensable/dp/B0HDB7G1GK/" target="_blank">The Executive Translation Influence Method</a>
+            </span>
+          </p>
           <h1>Your experience is valuable.<br><em>The market needs to see it.</em></h1>
           <p class="hero-strong-sub">The professionals who earn promotions, land executive roles, secure board seats,
             and attract advisory opportunities are not always the most qualified. They are the ones who know how to
@@ -1474,6 +1552,10 @@
           <p>My background as a journalist taught me how to identify the story that matters most and communicate it
             clearly to the people who need to hear it. Today, I help accomplished professionals uncover the value they
             bring, communicate it effectively, and build relationships that create opportunity.</p>
+          <p><strong>My new book</strong> — <a href="https://www.amazon.com/Executive-Translation-Influence-Method-Indispensable/dp/B0HDB7G1GK/"
+              target="_blank" style="color:var(--gold-light); text-decoration:underline; text-underline-offset:2px;">The
+              Executive Translation Influence Method</a> — distills my approach into a practical guide for professionals
+            ready to lead without a title and thrive in the AI-driven workplace.</p>
           <div class="kendra-strip-links"><a href="https://www.linkedin.com/in/kendraweinisch/" target="_blank"
               class="kendra-strip-link"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
                 <path
@@ -1774,6 +1856,26 @@
                   strategically. You do not announce you are looking. The repositioning works quietly in the background,
                   positioning you for the next level while you are still in your current role. Recruiters find you, not
                   the other way around.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== NEW: BOOK FAQ ITEM ===== -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you have a book?
+              <span class="icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <div class="faq-book-card">
+                  <img src="images/book-cover.jpg" alt="The Executive Translation Influence Method book cover" class="faq-book-cover" loading="lazy">
+                  <div class="faq-book-content">
+                    <p><strong>The Executive Translation Influence Method: Leading Without a Title and Making Yourself Indispensable in the AI-Driven Workplace</strong></p>
+                    <p>This book distills the Executive Translation framework into a practical guide for professionals who want to lead effectively — with or without a formal title — and build influence that cannot be replaced by AI.</p>
+                    <p><a href="https://www.amazon.com/Executive-Translation-Influence-Method-Indispensable/dp/B0HDB7G1GK/" target="_blank" style="color:var(--gold-dark); font-weight:600; text-decoration:underline; text-underline-offset:2px;">Buy on Amazon →</a> <span style="font-size:.7rem; color:var(--ink-light); margin-left:.5rem;">Paperback · Kindle</span></p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
