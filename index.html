@@ -1232,6 +1232,82 @@
       color: var(--ink);
     }
 
+    /* ===== CATALYST SECTION ===== */
+    .catalyst-section {
+      background: var(--cream);
+      padding: 5rem var(--gutter);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .catalyst-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .catalyst-content .lead {
+      margin-bottom: 1.5rem;
+    }
+
+    .catalyst-features {
+      list-style: none;
+      padding-left: 0;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .catalyst-features li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+      color: var(--ink-mid);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .catalyst-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--gold-dark);
+      font-weight: 600;
+    }
+
+    .catalyst-card {
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-radius: 4px;
+      padding: 2.25rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(20, 18, 16, .06);
+    }
+
+    .catalyst-card .pkg-amount {
+      font-size: 2.4rem;
+    }
+
+    .catalyst-card .pkg-term {
+      text-align: center;
+      margin-top: 0.25rem;
+    }
+
+    .catalyst-card .pkg-desc {
+      margin-top: 1rem;
+    }
+
+    .catalyst-card .btn {
+      margin-top: 1.25rem;
+    }
+
+    .catalyst-card .catalyst-note {
+      font-size: 0.72rem;
+      color: var(--ink-light);
+      margin-top: 1rem;
+    }
+
     @media (max-width: 600px) {
       .faq-book-card {
         grid-template-columns: 1fr;
@@ -1242,6 +1318,15 @@
       .faq-book-cover {
         max-width: 120px;
         margin: 0 auto;
+      }
+
+      .catalyst-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .catalyst-card {
+        padding: 1.75rem;
       }
     }
 
@@ -1751,6 +1836,37 @@
       </section>
     </section>
 
+    <!-- ===== CAREER CATALYST DIAGNOSTIC ===== -->
+    <section class="catalyst-section" id="catalyst">
+      <div class="wrap">
+        <div class="catalyst-grid">
+          <div class="catalyst-content">
+            <p class="section-eyebrow">A different kind of session</p>
+            <h2>Not chasing the C-suite yet? Start here.</h2>
+            <p class="lead">You don't have to be aiming for a board seat or an executive title to know something in your career needs to change. If you're mid-career and ready for your next real step, whatever that looks like, the Career Catalyst Diagnostic gives you a clear answer in one session.</p>
+
+            <p style="color: var(--ink-mid); margin-bottom: 1rem; font-weight: 500;">What you get</p>
+            <ul class="catalyst-features">
+              <li>A real diagnosis of what's creating the gap between your experience and how you're being perceived</li>
+              <li>A written roadmap: 3-5 specific findings, each with a next step</li>
+              <li>One finished, usable asset: a rewritten LinkedIn headline and About section, or resume summary</li>
+              <li>One 50-minute private session</li>
+              <li>30 days of email access after the session</li>
+            </ul>
+          </div>
+          <div class="catalyst-card">
+            <p class="pkg-badge" style="margin-bottom: 0.5rem;">One session · No ongoing commitment</p>
+            <p class="pkg-amount" style="font-family: var(--serif); font-weight: 500; color: var(--ink);">$995</p>
+            <p class="pkg-term">private, 1-on-1</p>
+            <hr class="pkg-divider">
+            <p class="pkg-desc" style="font-size: 0.95rem; color: var(--ink-mid);">A single, focused session designed to give you clarity, a concrete asset, and a roadmap for what comes next.</p>
+            <a href="/career-catalyst" class="btn btn-gold" >Learn More</a>
+            <p class="catalyst-note">No ongoing commitment. No upsell. Just a clear diagnosis and a path forward.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== SCORECARD ===== -->
     <section class="scorecard-section" id="scorecard">
       <div class="scorecard-grid">
@@ -1923,6 +2039,7 @@
             <ul class="footer-nav">
               <li><a href="/executive-positioning">Executive Positioning</a></li>
               <li><a href="/board-advisory-transition">Board & Advisory Transition</a></li>
+              <li><a href="/career-catalyst">Career Catalyst Diagnostic</a></li>
             </ul>
           </nav>
           <nav>
@@ -1939,7 +2056,7 @@
               style="font-size:.82rem; color:rgba(248,244,239,.65); text-decoration:none; transition:color .2s;">Executive
               Visibility Scorecard</a>
             <div class="footer-cta-box">
-              <a href="#book" class="btn btn-gold" style="min-height:40px;">Free consultation</a>
+              <a href="https://executivetranslation.setmore.com/kendra/service/0f17b287-f813-4991-88e5-7e43a534e0b0" class="btn btn-gold" style="min-height:40px;" target="_blank">Free consultation</a>
             </div>
           </div>
         </div>
