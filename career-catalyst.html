@@ -417,11 +417,12 @@
 
         .hero-trust {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+            gap: 1rem;
             border-top: 1px solid var(--cream-dark);
             padding-top: 1.5rem;
+            width: 100%;
         }
 
         .hero-trust-label {
@@ -430,13 +431,16 @@
             letter-spacing: .08em;
             text-transform: uppercase;
             color: var(--ink-light);
+            text-align: center;
         }
 
         .hero-trust-logos {
             display: flex;
-            gap: 1.5rem;
+            justify-content: center;
             align-items: center;
+            gap: 2rem 3rem;
             flex-wrap: wrap;
+            width: 100%;
         }
 
         .hero-trust-logos img {
@@ -1192,7 +1196,7 @@
             }
 
             .hero-trust-logos {
-                gap: .75rem;
+                gap: 1rem 1.5rem;
             }
 
             .hero-trust-logos img {
