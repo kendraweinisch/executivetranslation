@@ -1,0 +1,35 @@
+# executivetranslation.com/robots.txt
+# Allow search engines and AI assistants to read and cite the site.
+
+User-agent: *
+Allow: /
+
+# OpenAI (ChatGPT search results and browsing)
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google AI (Gemini, AI Overviews use regular Googlebot)
+User-agent: Google-Extended
+Allow: /
+
+# Bing (also feeds Copilot and parts of ChatGPT search)
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://executivetranslation.com/sitemap.xml
