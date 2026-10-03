@@ -3,29 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Executive Translation | Board and Advisory Roles</title>
-  <meta name="description"
-    content="Senior professionals don't get stuck because they lack capability. They get stuck because the market doesn't understand their value. Executive Translation fixes that in 4 weeks, privately.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Free Translation Clinic | Executive Translation</title>
+  <meta name="description" content="A free 45-minute live session: real LinkedIn headlines, self-review lines and interview answers rewritten from expert language into leader language.">
   <meta name="author" content="Kendra Weinisch | Executive Translation">
-  <meta property="og:title" content="Executive Translation | Career Repositioning for Professionals">
-  <meta property="og:description"
-    content="A 5-week private program that translates your experience into executive authority.">
+  <meta property="og:title" content="Free Translation Clinic | Executive Translation">
+  <meta property="og:description" content="A free 45-minute live session: real LinkedIn headlines, self-review lines and interview answers rewritten from expert language into leader language.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://executivetranslation.com">
+  <meta property="og:url" content="https://executivetranslation.com/clinic">
+  <link rel="canonical" href="https://executivetranslation.com/clinic">
   <meta name="theme-color" content="#141210">
-
-  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="images/ETfavicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/ETfavicon.png">
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
     rel="stylesheet">
-
   <style>
     /* WCAG 2.2 AA: All color contrasts verified */
     *,
@@ -364,6 +357,7 @@
       display: flex;
       align-items: center;
       gap: .75rem;
+      flex-wrap: wrap;
     }
 
     .hero-eyebrow::before {
@@ -372,6 +366,29 @@
       width: 32px;
       height: 1px;
       background: var(--gold-dark);
+    }
+
+    .hero-eyebrow .book-badge {
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--ink-light);
+      font-size: .65rem;
+      background: var(--gold-pale);
+      padding: .2rem .6rem;
+      border-radius: 20px;
+      border: 1px solid var(--cream-dark);
+    }
+
+    .hero-eyebrow .book-badge a {
+      color: var(--gold-dark);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 500;
+    }
+
+    .hero-eyebrow .book-badge a:hover {
+      color: var(--gold);
     }
 
     .hero h1 {
@@ -386,6 +403,19 @@
     .hero h1 em {
       font-style: italic;
       color: var(--gold-dark);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--ink-mid);
+      max-width: 500px;
+      margin-bottom: .75rem;
+    }
+
+    .hero-sub strong {
+      color: var(--ink);
+      font-weight: 500;
     }
 
     .hero-strong-sub {
@@ -902,7 +932,7 @@
       margin-top: 1.5rem;
     }
 
-    /* Testimonials - restored */
+    /* Testimonials */
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1122,7 +1152,7 @@
       text-align: center;
     }
 
-    /* ===== INSIGHT SECTION: Ibarra Data ===== */
+    /* ===== INSIGHT SECTION ===== */
     .insight-section {
       background: var(--cream);
       padding: 5rem var(--gutter);
@@ -1157,6 +1187,140 @@
 
     .insight-highlight-box p {
       color: var(--ink-mid);
+    }
+
+    /* FAQ book card */
+    .faq-book-card {
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-radius: 4px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .faq-book-cover {
+      width: 100%;
+      max-width: 100px;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 8px 24px rgba(20, 18, 16, .12);
+      display: block;
+    }
+
+    .faq-book-content p {
+      color: var(--ink-mid);
+      font-size: .95rem;
+      margin-bottom: .75rem;
+    }
+
+    .faq-book-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-book-content strong {
+      color: var(--ink);
+    }
+
+    /* ===== CATALYST SECTION ===== */
+    .catalyst-section {
+      background: var(--cream);
+      padding: 5rem var(--gutter);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .catalyst-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .catalyst-content .lead {
+      margin-bottom: 1.5rem;
+    }
+
+    .catalyst-features {
+      list-style: none;
+      padding-left: 0;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .catalyst-features li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+      color: var(--ink-mid);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .catalyst-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--gold-dark);
+      font-weight: 600;
+    }
+
+    .catalyst-card {
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-radius: 4px;
+      padding: 2.25rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(20, 18, 16, .06);
+    }
+
+    .catalyst-card .pkg-amount {
+      font-size: 2.4rem;
+    }
+
+    .catalyst-card .pkg-term {
+      text-align: center;
+      margin-top: 0.25rem;
+    }
+
+    .catalyst-card .pkg-desc {
+      margin-top: 1rem;
+    }
+
+    .catalyst-card .btn {
+      margin-top: 1.25rem;
+    }
+
+    .catalyst-card .catalyst-note {
+      font-size: 0.72rem;
+      color: var(--ink-light);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .faq-book-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .faq-book-cover {
+        max-width: 120px;
+        margin: 0 auto;
+      }
+
+      .catalyst-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .catalyst-card {
+        padding: 1.75rem;
+      }
     }
 
     /* Footer */
@@ -1315,13 +1479,205 @@
       .reframe-arrow {
         transform: rotate(90deg);
       }
+
+      .pkg-top {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .pkg-price {
+        text-align: left;
+      }
+
+      .pkg-term {
+        text-align: left;
+      }
     }
+
+    /* Proof / translation examples (from Clarity Sprint) */
+    .proof {
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-radius: 4px;
+      padding: 1.5rem 1.5rem 1.75rem;
+      display: grid;
+      gap: 1.1rem;
+      box-shadow: 0 20px 60px rgba(20, 18, 16, .08);
+    }
+
+    .proof-line {
+      display: grid;
+      gap: 0.2rem;
+    }
+
+    .proof-line + .proof-line {
+      border-top: 1px dashed var(--cream-dark);
+      padding-top: 1.1rem;
+    }
+
+    .struck {
+      color: var(--ink-light);
+      text-decoration: line-through;
+      text-decoration-color: rgba(179, 67, 46, .7);
+      text-decoration-thickness: 2px;
+      font-size: 0.95rem;
+    }
+
+    .inserted {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--gold-dark);
+      line-height: 1.3;
+    }
+
+    .inserted::before {
+      content: "^ ";
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      vertical-align: 0.2em;
+      opacity: .6;
+    }
+
+    /* Timeline (from Clarity Sprint) */
+    .timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0;
+    }
+
+    .timeline li {
+      display: grid;
+      grid-template-columns: 7rem minmax(0, 1fr);
+      gap: 1.25rem;
+      padding-block: 1.1rem;
+      border-top: 1px solid var(--cream-dark);
+    }
+
+    .timeline li:last-child {
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .day {
+      font-family: var(--sans);
+      font-size: .8rem;
+      font-weight: 500;
+      color: var(--gold-dark);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: .04em;
+    }
+
+    .timeline h3 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+      color: var(--ink);
+    }
+
+    .timeline p {
+      color: var(--ink-mid);
+      font-size: .95rem;
+    }
+
+    /* Brief (from Clarity Sprint) */
+    .brief {
+      counter-reset: brief;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 1rem 2.5rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .brief li {
+      counter-increment: brief;
+      display: grid;
+      grid-template-columns: 2rem minmax(0, 1fr);
+      gap: 0.5rem;
+    }
+
+    .brief li::before {
+      content: "§" counter(brief);
+      font-family: var(--sans);
+      font-size: .8rem;
+      font-weight: 500;
+      color: var(--gold-dark);
+      opacity: .7;
+    }
+
+    .brief strong {
+      display: block;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .brief span {
+      color: var(--ink-mid);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 960px) {
+      .brief {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .timeline li {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+      }
+    }
+
+    .tool { padding: 8.5rem var(--gutter) 5rem; min-height: 80vh; }
+    .tool-card { max-width: 720px; margin: 0 auto; background: var(--white); border: 1px solid var(--cream-dark); border-radius: 4px; padding: clamp(1.5rem, 5vw, 3rem); box-shadow: 0 20px 60px rgba(20,18,16,.06); }
+    .tool h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.12; margin-bottom: 1rem; }
+    .tool h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.2; margin-bottom: 1rem; }
+    .tool p { color: var(--ink-mid); margin-bottom: 1rem; }
+    .eyebrow { font-size: .68rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 1rem; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; font-size: .85rem; color: var(--ink-light); margin: 1.25rem 0 1.75rem; }
+    .progress { height: 4px; background: var(--cream-mid); border-radius: 2px; margin-bottom: 1.75rem; overflow: hidden; }
+    .progress span { display: block; height: 100%; background: var(--gold-dark); width: 0; transition: width .25s; }
+    .q-count { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-light); margin-bottom: .5rem; }
+    .q-text { font-family: var(--serif); font-size: clamp(1.35rem, 3.5vw, 1.75rem); line-height: 1.3; color: var(--ink); margin-bottom: 1.5rem; }
+    .opts { display: grid; gap: .65rem; }
+    .opt { text-align: left; font: inherit; font-size: 1rem; color: var(--ink); background: var(--cream); border: 1px solid var(--cream-dark); border-radius: 3px; padding: .9rem 1.1rem; cursor: pointer; min-height: 48px; transition: border-color .15s, background .15s; }
+    .opt:hover { border-color: var(--gold); background: var(--white); }
+    .opt[aria-pressed="true"] { border-color: var(--gold-dark); background: var(--gold-pale); }
+    .q-nav { display: flex; justify-content: space-between; margin-top: 1.5rem; }
+    .linkbtn { background: none; border: none; font: inherit; font-size: .85rem; color: var(--ink-light); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; padding: .5rem 0; }
+    .score-big { font-family: var(--serif); font-size: 3.5rem; line-height: 1; color: var(--gold-dark); }
+    .dims { display: grid; gap: .85rem; margin: 1.75rem 0; }
+    .dim-label { display: flex; justify-content: space-between; font-size: .9rem; color: var(--ink-mid); margin-bottom: .3rem; }
+    .dim-bar { height: 8px; background: var(--cream-mid); border-radius: 4px; overflow: hidden; }
+    .dim-bar span { display: block; height: 100%; background: var(--gold-dark); }
+    .dim.is-low .dim-label { color: var(--ink); font-weight: 600; }
+    .dim.is-low .dim-bar span { background: var(--ink); }
+    .fix { background: var(--cream); border-left: 3px solid var(--gold-dark); padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+    .fix strong { display: block; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: .4rem; }
+    .fix p { margin: 0; color: var(--ink); }
+    .cta-box { border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 2rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; margin-top: 1.25rem; }
+    .form-box { background: var(--cream); border: 1px solid var(--cream-dark); border-radius: 3px; padding: 1.5rem; margin-top: 2rem; }
+    .form-box label { display: block; font-size: .8rem; font-weight: 500; color: var(--ink-mid); margin: .75rem 0 .3rem; }
+    .form-box input { width: 100%; font: inherit; padding: .7rem .85rem; border: 1px solid var(--cream-dark); border-radius: 2px; background: var(--white); min-height: 46px; }
+    .form-box .fine { font-size: .75rem; color: var(--ink-light); margin: .75rem 0 0; }
+    .form-box .btn { margin-top: 1rem; }
+    .ok { color: var(--gold-dark); font-weight: 500; }
+    .list-check { list-style: none; margin: 1rem 0 1.5rem; }
+    .list-check li { position: relative; padding-left: 1.6rem; margin-bottom: .6rem; color: var(--ink-mid); }
+    .list-check li::before { content: '✓'; position: absolute; left: 0; color: var(--gold-dark); font-weight: 600; }
+    [hidden] { display: none !important; }
+
   </style>
 </head>
 
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-
   <header>
     <nav class="site-nav" aria-label="Main navigation">
       <div class="nav-inner">
@@ -1334,364 +1690,56 @@
           <li><a href="/#process">Method</a></li>
           <li><a href="/#testimonials">Testimonials</a></li>
           <li><a href="/#faq">FAQ</a></li>
-          <li><a href="/#book" class="nav-cta-link">Free consultation</a></li>
+          <li><a href="/#start" class="nav-cta-link">Clarity Sprint</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <main id="main-content">
+    <section class="tool">
+      <div class="tool-card">
+        <p class="eyebrow">Free · Live on Zoom · 45 minutes</p>
+        <h1>The Translation Clinic</h1>
+        <p style="font-size:1.1rem;">Watch expert language get rewritten into leader language, live.</p>
+        <div class="meta-row"><span>Thursday, October 22, 2026</span><span>12:00–12:45 pm Eastern (9:00 am Pacific · 18:00 Central European)</span></div>
 
-    <!-- ===== HERO SECTION ===== -->
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="hero-text">
-          <p class="hero-eyebrow">Board & Advisory Transition</p>
-          <h1>Boards don't hire the most qualified.<br><em>They hire the ones who know how to position themselves.</em>
-          </h1>
-          <p class="hero-strong-sub">And at your level, you're smart enough to know when to save time, energy, and
-            frustration by hiring an expert to help.</p>
-          <div class="li-callout">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="color:#0A66C2" width="13" height="13">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-            <a href="https://linkedin.com/in/kendraweinisch" target="_blank">You found me on LinkedIn. Let's talk about
-              your specific situation.</a>
-          </div>
-          <div class="hero-actions"><a href="#book" class="btn btn-gold">Schedule a consultation</a><a href="#process"
-              class="btn btn-ghost">See the process</a></div>
+        <p>Once a month I take real lines from volunteers (a LinkedIn headline, a self-review sentence, an interview answer) and rewrite them on screen, from the way experts describe their work to the way promotion committees and hiring managers choose.</p>
+        <ul class="list-check">
+          <li>Three live rewrites, with the reasoning for every change</li>
+          <li>The before → after patterns you can use on your own lines that afternoon</li>
+          <li>Open Q&amp;A at the end</li>
+        </ul>
+        <p><strong>Who it's for:</strong> senior engineers, analysts, scientists, finance, legal and product specialists ready for the next level, and international leaders who present, negotiate and interview in English.</p>
+        <p><strong>Volunteering is optional.</strong> If you'd like your line rewritten, you'll send it beforehand and I'll remove names and company details. Everyone else just watches.</p>
+
+        <form class="form-box" id="c-form" hidden novalidate>
+          <h2 style="font-size:1.35rem;">Save a seat</h2>
+          <label for="c-name">First name</label>
+          <input id="c-name" autocomplete="given-name" required>
+          <label for="c-email">Personal email</label>
+          <input id="c-email" type="email" autocomplete="email" required>
+          <p class="fine">The Zoom link arrives by email. Please use a personal address. Unsubscribe any time.</p>
+          <button class="btn btn-gold" type="submit">Save a seat</button>
+          <p class="ok" id="c-ok" hidden role="status">You're in. Watch your inbox for the Zoom link.</p>
+        </form>
+
+        <div class="form-box" id="c-fallback">
+          <h2 style="font-size:1.35rem;">Save a seat</h2>
+          <p>Send me a LinkedIn message with the word <strong>"Clinic"</strong> and I'll send you the Zoom link.</p>
+          <a class="btn btn-gold" href="https://www.linkedin.com/in/kendraweinisch/" target="_blank" rel="noopener">Message me on LinkedIn</a>
         </div>
-        <div class="hero-card">
-          <p class="hero-card-label">Start here</p>
-          <p
-            style="font-family:var(--serif); font-size:1.3rem; font-weight:500; color:var(--gold-dark); margin-bottom:0.5rem;">
-            Executive Visibility Scorecard</p>
-          <p style="font-size:.9rem; color:var(--ink-mid); margin-bottom:1.25rem;">Before scheduling a conversation,
-            start with a quick assessment. In less than five minutes, you'll discover how visible you are to recruiters
-            and decision-makers, and what's limiting your professional opportunities.</p>
-          <hr class="stat-divider">
-          <a href="/scorecard" class="btn btn-gold" target="_blank">Get Your Visibility
-            Scorecard</a>
-          <p class="hero-card-note">5 minutes · Free · Instant results</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== LOGOS ===== -->
-    <section class="logos-section">
-      <p class="logos-label">Clients include professionals from</p>
-      <ul class="logos-grid">
-        <li class="logo-item logo-item--apple"><img src="images/apple-logo.png" alt="Apple"></li>
-        <li class="logo-item logo-item--toyota"><img src="images/toyota-logo.png" alt="Toyota"></li>
-        <li class="logo-item"><img src="images/lenovo-logo.png" alt="Lenovo"></li>
-        <li class="logo-item"><img src="images/reebok-logo.png" alt="Reebok"></li>
-        <li class="logo-item"><img src="images/qualcomm-logo.png" alt="Qualcomm"></li>
-      </ul>
-    </section>
+        <p style="margin-top:1.5rem;"><a id="c-ics" download="translation-clinic.ics" href="#" style="color:var(--gold-dark);">Add it to your calendar</a></p>
 
-
-    <!-- ===== SECTION: What Clients Say ===== -->
-    <section class="section section-dark" id="testimonials">
-      <div class="wrap">
-        <p class="section-eyebrow section-eyebrow--light">What clients say</p>
-        <h2>Results from people who've been exactly where you are.</h2>
-        <div class="testimonials-grid">
-          <figure class="testimonial">
-            <blockquote class="testimonial-text">The coaching was transformative. I successfully transitioned into an HR
-              advisory role that provides the perfect blend of lifestyle freedom and deep professional meaning.
-            </blockquote>
-            <figcaption class="testimonial-author"><a href="https://www.linkedin.com/in/adaoraemembolu/"
-                target="_blank">Adaora Emembolu – Fractional CHRO</a></figcaption>
-          </figure>
-          <figure class="testimonial">
-            <blockquote class="testimonial-text">Kendra gave clarity to my path to a board seat.</blockquote>
-            <figcaption class="testimonial-author"><a href="https://www.linkedin.com/in/elias-de-matos-brito/" target="_blank">Elias D.
-                – Board Member, Gafisa</a></figcaption>
-          </figure>
-          <figure class="testimonial">
-            <blockquote class="testimonial-text">Most people think of editing as a communication skill. Working with
-              Kendra taught me it's actually a business skill.</blockquote>
-            <figcaption class="testimonial-author"><a href="https://www.linkedin.com/in/seanvantyne/"
-                target="_blank">Sean Van Tyne – CEO, Van Tyne Group</a></figcaption>
-          </figure>
+        <div class="cta-box">
+          <p class="eyebrow">While you wait</p>
+          <p>Take the free <a href="/scorecard" style="color:var(--gold-dark);">Next-Level Readiness Scorecard</a> (4 minutes) to see which of your lines to bring. Or, if you'd rather work on your own story 1:1, start with the <a href="/clarity-sprint" style="color:var(--gold-dark);">Clarity Sprint</a>.</p>
         </div>
       </div>
     </section>
-
-    <!-- ===== SECTION: Services / $7,000 Package ===== -->
-    <section class="section" id="services">
-      <div class="wrap wrap--mid">
-        <p class="section-eyebrow">Work with me</p>
-        <h2>Position yourself for the next opportunity.</h2>
-
-        <div class="packages">
-          <article class="pkg pkg--featured" id="board-pkg">
-            <div class="pkg-top">
-              <div class="pkg-left">
-                <span class="pkg-badge">Board & advisory</span>
-                <h3 class="pkg-name">Board & Advisory Transition</h3>
-                <p class="pkg-tagline">For executives pursuing board seats, advisory opportunities, fractional
-                  leadership roles, and portfolio careers.</p>
-              </div>
-              <div class="pkg-price">
-                <p class="pkg-amount">$7,000</p>
-                <p class="pkg-term">private, 1-on-1</p>
-              </div>
-            </div>
-            <hr class="pkg-divider">
-            <p class="pkg-desc">This engagement helps you identify, communicate, and market your value to boards,
-              investors, founders, and executive teams.</p>
-            <p class="pkg-includes-label">What's included</p>
-            <ul class="pkg-includes">
-              <li class="pkg-inc-group">Positioning</li>
-              <li class="pkg-inc">Executive Brand Audit</li>
-              <li class="pkg-inc">Executive Portfolio Narrative</li>
-              <li class="pkg-inc">Board/Advisor Value Matrix</li>
-              <li class="pkg-inc">Board Bio</li>
-              <li class="pkg-inc">Resume and Cover Letter Templates</li>
-              <li class="pkg-inc">LinkedIn Overhaul</li>
-              <li class="pkg-inc-group">Strategy</li>
-              <li class="pkg-inc">Opportunity Analysis</li>
-              <li class="pkg-inc">Strategic Relationship Framework</li>
-              <li class="pkg-inc">Targeted Search Strategy with Contact Lists and Scripts</li>
-              <li class="pkg-inc">Coaching for High-Stakes Conversations</li>
-              <li class="pkg-inc">Strategic Introductions (when appropriate)</li>
-              <li class="pkg-inc">Assistance with <a
-                  href="https://www.nacdonline.org/nacd-credentials/nacd-directorship-certification-credential/about-nacd-directorship-certification/"
-                  target="_blank" style="color:var(--gold-dark); text-decoration:underline;">NACD Certification</a></li>
-              <li class="pkg-inc-group">Support</li>
-              <li class="pkg-inc">5 private sessions, 50 minutes each</li>
-              <li class="pkg-inc">30 days of email access after the program ends</li>
-              <li class="pkg-inc-group">Payment</li>
-              <li class="pkg-inc">Half at signup, half after the second meeting</li>
-            </ul>
-            <div class="pkg-cta"><a
-                href="https://executivetranslation.setmore.com/services/0f61b381-2ebe-48b7-9130-5a470547a85d"
-                class="btn btn-gold">Sign up now</a></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SECTION: About Kendra ===== -->
-    <aside class="kendra-strip" id="about">
-      <div class="kendra-strip-inner">
-        <div class="kendra-avatar"><img src="images/author-photo.png" alt="Kendra Weinisch"></div>
-        <div class="kendra-strip-text">
-          <p>I'm <strong>Kendra Weinisch</strong>. My background as a journalist taught me how to find the story that
-            matters most and communicate it clearly to the people who need to hear it. That instinct is what I bring to
-            every coaching engagement.</p>
-          <p>Most advisors focus on résumés. Others focus on LinkedIn profiles. Some focus on interview preparation.
-            Those tools matter, but they are not the strategy. I find the version of your experience that
-            decision-makers at the next level are actually looking for, and I help you deliver it with authority.</p>
-          <div class="kendra-strip-links"><a href="https://www.linkedin.com/in/kendraweinisch/" target="_blank"
-              class="kendra-strip-link"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>Follow on LinkedIn</a><a href="#book" class="kendra-strip-link">Schedule a consultation →</a></div>
-        </div>
-      </div>
-    </aside>
-
-    <!-- ===== SECTION: The Problem ===== -->
-    <section class="problem-section">
-      <div class="problem-inner">
-        <p class="section-eyebrow section-eyebrow--light" style="color:var(--gold-light);">The problem</p>
-        <h2>How smart executives waste time.</h2>
-        <p class="lead">Most accomplished professionals assume their experience will speak for itself, their networks
-          will keep them in mind for opportunities, and boards hire constantly.
-        </p>
-
-        <div class="problem-grid">
-          <div class="problem-card">
-            <h3>Experience is not enough.</h3>
-            <p>You need to translate that experience into the strategic, transferrable insight companies value and use
-              modern marketing techniques to expand your visibility.</p>
-          </div>
-          <div class="problem-card">
-            <h3>It takes time.</h3>
-            <p>Professionals are overwhelmed by generic personal branding content, AI-generated messaging that sounds
-              like everyone else, and advice that doesn't translate to their specific situation.</p>
-          </div>
-          <div class="problem-card">
-            <h3>Time is the enemy of strategy.</h3>
-            <p>Many know they should be networking more strategically. Many know they should be positioning themselves
-              differently. Few have the time or clarity to determine what actually matters.</p>
-          </div>
-          <div class="problem-card">
-            <h3>Positioning gaps hold you back.</h3>
-            <p>That's where Executive Translation comes in. I identify the gaps holding you back and create a strategy
-              designed to help you move forward faster.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SECTION: The Methodology ===== -->
-    <section class="section" id="process">
-      <div class="wrap wrap--mid">
-        <p class="section-eyebrow">The Methodology</p>
-        <h2>The Executive Translation Method™</h2>
-        <p class="lead">Built from 20 years of observation, journalistic research, interviews with sitting
-          board directors, and 50+ coaching engagements, the private system translates your experience into authority
-          across every surface where it matters.</p>
-        <ol class="process">
-          <li class="process-step"><span class="process-num">01</span><span class="process-rule"></span>
-            <p class="process-title">Identify</p>
-          </li>
-          <li class="process-step"><span class="process-num">02</span><span class="process-rule"></span>
-            <p class="process-title">Position</p>
-          </li>
-          <li class="process-step"><span class="process-num">03</span><span class="process-rule"></span>
-            <p class="process-title">Train</p>
-          </li>
-          <li class="process-step"><span class="process-num">04</span><span class="process-rule"></span>
-            <p class="process-title">Network</p>
-          </li>
-          <li class="process-step"><span class="process-num">05</span><span class="process-rule"></span>
-            <p class="process-title">Command</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===== SECTION: FAQ ===== -->
-    <section class="faq-section" id="faq">
-      <div class="wrap wrap--mid">
-        <p class="section-eyebrow">Frequently Asked Questions</p>
-        <h2>Questions people ask before they leap.</h2>
-        <p class="lead" style="margin-bottom:2.5rem;">Straight answers. No corporate spin. If something isn't clear, the
-          free consultation is always there.</p>
-
-        <div class="faq-grid">
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              Are you a recruiter?
-              <span class="icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                <p>No. Recruiters work for companies to fill open positions. I work for you. But I work closely with
-                  recruiters and understand exactly what they are looking for at the senior level. I do all the work
-                  recruiters wish candidates would do for themselves: identifying the right opportunities, crafting the
-                  scripts and templates that actually get responses, and building strategies that leapfrog you past the
-                  competition. I translate your experience into the language recruiters and hiring committees are
-                  already using to find their next executives.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              Do you guarantee results?
-              <span class="icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                <p>No. As a professional who follows the ethical guidelines of the <a
-                    href="https://coachingfederation.org/" target="_blank">International Coaching Federation</a>, I do
-                  not guarantee specific outcomes. Career advancement depends on many factors: market conditions,
-                  organizational politics, timing, and your own follow-through. What I do guarantee is my full
-                  investment in your repositioning, a proven methodology, and honest feedback about what is working and
-                  what is not. I guarantee the process, not the outcome.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              What industries do you work with?
-              <span class="icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                <p>All of them. Positioning is not industry-specific. Whether you are in tech, finance, healthcare,
-                  manufacturing, or non-profits, the dynamics are the same. You have value. The market needs to see it
-                  clearly. Narrative is what bridges that gap.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              What does it cost?
-              <span class="icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                <p>The Board & Advisory Transition package is $7,000. No hidden fees. No upsells. Just transparent
-                  pricing for high-value work.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              What if I am currently employed and do not want to tip anyone off?
-              <span class="icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                <p>That is exactly how most of my clients come to me. Everything is private. LinkedIn work is done
-                  strategically. However, most executives are able to openly serve on a board or as a strategic advisor
-                  while maintaining their current positions.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SECTION: Scorecard ===== -->
-    <section class="scorecard-section" id="scorecard">
-      <div class="scorecard-grid">
-        <div class="scorecard-col-center">
-          <p class="section-eyebrow">Free resource</p>
-          <h2>Executive Visibility Scorecard</h2>
-          <p style="font-size:1.1rem; color: var(--ink-mid); margin-bottom:1.5rem;">Before scheduling a conversation,
-            start with a quick assessment.</p>
-          <p style="margin-bottom:1rem; color: var(--ink-mid);">In less than five minutes, you will discover:</p>
-          <ul class="scorecard-list">
-            <li>How visible you are to recruiters and decision-makers</li>
-            <li>Whether your profile signals leadership readiness</li>
-            <li>What is limiting your professional visibility</li>
-            <li>Which improvements will have the biggest impact</li>
-          </ul>
-          <br>
-          <a href="/scorecard" class="btn btn-gold" target="_blank">Get Your Score</a>
-          <p style="font-size:.75rem; color: var(--ink-light); margin-top:1rem;">Get your score instantly — no email
-            required.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SECTION: Book / Consultation ===== -->
-    <section class="book-section" id="book">
-      <div class="wrap">
-        <p class="section-eyebrow">Ready for the next opportunity?</p>
-        <h2>Schedule a consultation.</h2>
-        <div class="book-grid">
-          <div class="book-text">
-            <h3>The Executive Translation Consultation</h3>
-            <p>The next role, promotion, board seat, or advisory opportunity often depends on how effectively you
-              communicate your value.</p>
-            <p>Schedule a consultation to discuss your goals, identify potential positioning gaps, and determine the
-              best strategy for moving forward.</p>
-            <ul class="book-list">
-              <li>No slides. No pitch. No homework required beforehand.</li>
-              <li>You'll leave with a clear diagnosis and one concrete next step.</li>
-            </ul>
-          </div>
-          <div class="calendar-embed"><iframe src="https://calendly.com/kendraweinisch/executivetranslation15"
-              title="Schedule a consultation" width="100%" height="540" frameborder="0"></iframe></div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ===== FOOTER ===== (matches index.html and career-catalyst.html) -->
   <footer>
     <div class="footer-top">
       <div class="wrap">
@@ -1705,13 +1753,14 @@
             <p class="footer-col-label">Services</p>
             <ul class="footer-nav">
               <li><a href="/executive-positioning">Executive Positioning</a></li>
+              <li><a href="/clarity-sprint">Clarity Sprint</a></li>
             </ul>
           </nav>
           <nav>
             <p class="footer-col-label">Company</p>
             <ul class="footer-nav">
-              <li><a href="#about">About Kendra</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="/#about">About Kendra</a></li>
+              <li><a href="/#testimonials">Testimonials</a></li>
               <li><a href="/#faq">FAQ</a></li>
             </ul>
           </nav>
@@ -1722,11 +1771,10 @@
             <div class="footer-cta-box">
               <a href="https://executivetranslation.setmore.com/kendra/service/0f17b287-f813-4991-88e5-7e43a534e0b0" class="btn btn-gold" style="min-height:40px;" target="_blank">Free consultation</a>
             </div>
-            <!-- BOOK LINK IN FOOTER (matches index) -->
             <div style="margin-top: 1.5rem; border-top: 1px solid rgba(248,244,239,0.1); padding-top: 1.25rem;">
               <a href="https://www.amazon.com/Executive-Translation-Influence-Method-Indispensable-ebook/dp/B0HDDWGQDJ/ref=sr_1_1?crid=193R1HZAIB2WM&dib=eyJ2IjoiMSJ9.gjImkCxmm1jh2NJMhYvWqmRisgZXtBKt0wKujtl-7yyeSiQ0Jjvxkzp4aAQlkAH9T0lubF-gZ2SzVqwEBvKCtxdl2C_aVaBAQu-igkHx-3RTiCPTdtIBJyrEiy2IJF_ce92umd6OuWPK3XJyGsAbNbR0P8e_usjS8oVOoFqxjUhDDD5jKNwtv10ozTKa10lFHRPlWj1sR63ApVBvVrhMSGoUZvpR-5LCtgCAwzYF92Y.0P8HoqxC3naH7QbdumnbtM5R0v2v9p9QzUl3-KKQ0Iw&dib_tag=se&keywords=executive+translation&qid=1786892144&sprefix=%2Caps%2C172&sr=8-1"
-                target="_blank"
-                style="font-size:0.75rem; color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(196, 162, 114, 0.4); padding-bottom: 1px;">
+                 target="_blank"
+                 style="font-size:0.75rem; color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(196, 162, 114, 0.4); padding-bottom: 1px;">
                 📖 Buy the Book on Amazon
               </a>
             </div>
@@ -1779,6 +1827,42 @@
           }
         });
       });
+    })();
+  </script>
+  <script>
+    window.ET_FORMS = {
+      // MailerLite embedded-form action URLs, e.g. https://assets.mailerlite.com/jsonp/123456/forms/987654321/subscribe
+      scorecard: '',
+      clinic: ''
+    };
+  </script>
+  <script>
+    (function () {
+      var $ = function (id) { return document.getElementById(id); };
+      $('c-ics').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent("BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Executive Translation//Clinic//EN\r\nBEGIN:VEVENT\r\nUID:clinic-20261022T160000Z@executivetranslation.com\r\nDTSTAMP:20261003T000000Z\r\nDTSTART:20261022T160000Z\r\nDTEND:20261022T164500Z\r\nSUMMARY:Translation Clinic (Executive Translation)\r\nDESCRIPTION:Free live session with Kendra Weinisch. The Zoom link arrives by email.\r\nURL:https://executivetranslation.com/clinic\r\nEND:VEVENT\r\nEND:VCALENDAR");
+
+      function mlSubmit(action, fields) {
+        var fd = new FormData();
+        Object.keys(fields).forEach(function (k) {
+          if (k === 'email') fd.append('fields[email]', fields[k]);
+          else fd.append('fields[' + k + ']', fields[k]);
+        });
+        fd.append('ml-submit', '1');
+        fd.append('anticsrf', 'true');
+        return fetch(action, { method: 'POST', body: fd, mode: 'no-cors' });
+      }
+      var action = (window.ET_FORMS || {}).clinic;
+      if (action) {
+        $('c-form').hidden = false; $('c-fallback').hidden = true;
+        $('c-form').onsubmit = function (e) {
+          e.preventDefault();
+          var email = $('c-email').value.trim(), name = $('c-name').value.trim();
+          if (!name || !/^\S+@\S+\.\S+$/.test(email)) { $('c-email').focus(); return; }
+          mlSubmit(action, { email: email, name: name }).then(function () {
+            $('c-ok').hidden = false; $('c-form').querySelector('button').disabled = true;
+          });
+        };
+      }
     })();
   </script>
 </body>
