@@ -1699,7 +1699,7 @@
   <main id="main-content">
     <section class="tool">
       <div class="tool-card">
-        <p class="eyebrow">Free · Live on Zoom · 45 minutes</p>
+        <p class="eyebrow">Free · Live on Google Meet · 45 minutes</p>
         <h1>The Translation Clinic</h1>
         <p style="font-size:1.1rem;">Watch expert language get rewritten into leader language, live.</p>
         <div class="meta-row"><span>Thursday, October 22, 2026</span><span>12:00–12:45 pm Eastern (9:00 am Pacific · 18:00 Central European)</span></div>
@@ -1719,14 +1719,14 @@
           <input id="c-name" autocomplete="given-name" required>
           <label for="c-email">Personal email</label>
           <input id="c-email" type="email" autocomplete="email" required>
-          <p class="fine">The Zoom link arrives by email. Please use a personal address. Unsubscribe any time.</p>
+          <p class="fine">The Google Meet link arrives by email. Please use a personal address. Unsubscribe any time.</p>
           <button class="btn btn-gold" type="submit">Save a seat</button>
-          <p class="ok" id="c-ok" hidden role="status">You're in. Watch your inbox for the Zoom link.</p>
+          <p class="ok" id="c-ok" hidden role="status">You're in. Watch your inbox for the Google Meet link.</p>
         </form>
 
         <div class="form-box" id="c-fallback">
           <h2 style="font-size:1.35rem;">Save a seat</h2>
-          <p>Send me a LinkedIn message with the word <strong>"Clinic"</strong> and I'll send you the Zoom link.</p>
+          <p>Send me a LinkedIn message with the word <strong>"Clinic"</strong> and I'll send you the Google Meet link.</p>
           <a class="btn btn-gold" href="https://www.linkedin.com/in/kendraweinisch/" target="_blank" rel="noopener">Message me on LinkedIn</a>
         </div>
 
@@ -1839,7 +1839,7 @@
   <script>
     (function () {
       var $ = function (id) { return document.getElementById(id); };
-      $('c-ics').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent("BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Executive Translation//Clinic//EN\r\nBEGIN:VEVENT\r\nUID:clinic-20261022T160000Z@executivetranslation.com\r\nDTSTAMP:20261003T000000Z\r\nDTSTART:20261022T160000Z\r\nDTEND:20261022T164500Z\r\nSUMMARY:Translation Clinic (Executive Translation)\r\nDESCRIPTION:Free live session with Kendra Weinisch. The Zoom link arrives by email.\r\nURL:https://executivetranslation.com/clinic\r\nEND:VEVENT\r\nEND:VCALENDAR");
+      $('c-ics').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent("BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Executive Translation//Clinic//EN\r\nBEGIN:VEVENT\r\nUID:clinic-20261022T160000Z@executivetranslation.com\r\nDTSTAMP:20261003T000000Z\r\nDTSTART:20261022T160000Z\r\nDTEND:20261022T164500Z\r\nSUMMARY:Translation Clinic (Executive Translation)\r\nDESCRIPTION:Free live session with Kendra Weinisch. The Google Meet link arrives by email.\r\nURL:https://executivetranslation.com/clinic\r\nEND:VEVENT\r\nEND:VCALENDAR");
 
       function mlSubmit(action, fields) {
         var fd = new FormData();
