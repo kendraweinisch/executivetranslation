@@ -1849,7 +1849,9 @@
         });
         fd.append('ml-submit', '1');
         fd.append('anticsrf', 'true');
-        return fetch(action, { method: 'POST', body: fd, mode: 'no-cors' });
+        return fetch(action, { method: 'POST', body: fd })
+          .then(function (r) { return r.json(); })
+          .then(function (j) { if (!j || !j.success) throw j; return j; });
       }
       var action = (window.ET_FORMS || {}).clinic;
       if (action) {
@@ -1858,8 +1860,10 @@
           e.preventDefault();
           var email = $('c-email').value.trim(), name = $('c-name').value.trim();
           if (!name || !/^\S+@\S+\.\S+$/.test(email)) { $('c-email').focus(); return; }
-          mlSubmit(action, { email: email, name: name }).then(function () {
+          mlSubmit(action, { email: email }).then(function () {
             $('c-ok').hidden = false; $('c-form').querySelector('button').disabled = true;
+          }).catch(function () {
+            $('c-ok').hidden = false; $('c-ok').textContent = 'That didn\'t go through. Please check the email address, or message me "Clinic" on LinkedIn.';
           });
         };
       }

@@ -1952,12 +1952,8 @@
             e.preventDefault();
             var email = $('f-email').value.trim(), name = $('f-name').value.trim();
             if (!name || !/^\S+@\S+\.\S+$/.test(email)) { $('f-email').focus(); return; }
-            mlSubmit(action, {
-              email: email, name: name, score: total, band: band.name,
-              lowest_dimension: DIMS[low].name, lowest_tip: DIMS[low].tip,
-              track: 'track:' + track, sprint_link: 'https://executivetranslation.com' + SPRINT[track],
-              function: intake['function'], level: intake.level, next_move: intake.next_move, source: intake.source
-            }).then(function () { $('f-ok').hidden = false; $('r-form').querySelector('button').disabled = true; });
+            mlSubmit(action, { email: email }).then(function () { $('f-ok').hidden = false; $('r-form').querySelector('button').disabled = true; })
+              .catch(function () { $('f-ok').hidden = false; $('f-ok').textContent = 'That didn\'t go through. Please check the email address and try again.'; });
           };
         }
       }
@@ -1970,7 +1966,9 @@
         });
         fd.append('ml-submit', '1');
         fd.append('anticsrf', 'true');
-        return fetch(action, { method: 'POST', body: fd, mode: 'no-cors' });
+        return fetch(action, { method: 'POST', body: fd })
+          .then(function (r) { return r.json(); })
+          .then(function (j) { if (!j || !j.success) throw j; return j; });
       }
       $('sc-start').addEventListener('click', function () { $('sc-intro').hidden = true; $('sc-quiz').hidden = false; render(); });
       $('sc-back').addEventListener('click', function () { if (step > 0) { step--; render(); } });
